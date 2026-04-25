@@ -3,153 +3,160 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LOCABLE</title>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400&family=Noto+Sans+JP:wght@400;500&family=Bebas+Neue&display=swap" rel="stylesheet">
+<title>LOCABLE | Digital Content Implementation & PM</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&family=Source+Sans+3:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --navy:#0D1B3E;--navy-mid:#162444;--orange:#E85C1A;--orange-soft:#f07340;
-  --cream:#F6F3ED;--cream-dark:#EDEAE2;--rule:#D4D0C8;
-  --tx-primary:#111111;--tx-body:#2C2C2C;--tx-sub:#555555;--tx-muted:#888888;
-  --tx-on-dark:#F0EDE6;--tx-on-dark-sub:#B8B4AC;--tx-on-dark-muted:#787470;
-  --white:#fff;
+  --navy:#152042;
+  --navy-mid:#1C2A52;
+  --navy-soft:#24345F;
+  --orange:#F26522;
+  --orange-soft:#f47a45;
+  --cream:#F7F5F0;
+  --cream-dark:#ECE8DF;
+  --rule:#D8D3C9;
+  --tx-primary:#111827;
+  --tx-body:#2F3440;
+  --tx-sub:#5F6673;
+  --tx-muted:#8B929E;
+  --tx-on-dark:#FFFFFF;
+  --tx-on-dark-sub:#C8CEDA;
+  --tx-on-dark-muted:#8D96AA;
+  --white:#FFFFFF;
 }
 html{scroll-behavior:smooth}
-body{font-family:'Noto Sans JP',sans-serif;background:var(--cream);color:var(--tx-body);line-height:1.7;overflow-x:hidden}
-nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.1rem 4rem;background:var(--navy);border-bottom:1px solid rgba(255,255,255,0.07)}
-.nav-logo{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;color:var(--tx-on-dark);letter-spacing:0.12em}
+body{font-family:'Noto Sans JP',sans-serif;background:var(--cream);color:var(--tx-body);line-height:1.75;overflow-x:hidden;font-weight:300}
+button,a{font-family:inherit}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.1rem 4rem;background:rgba(21,32,66,0.96);backdrop-filter:blur(8px);border-bottom:1px solid rgba(255,255,255,0.08)}
+.nav-logo{font-family:'Source Sans 3',sans-serif;font-size:1.25rem;color:var(--tx-on-dark);letter-spacing:0.18em;font-weight:300}
 .nav-logo span{color:var(--orange)}
-.nav-links{display:flex;align-items:center;gap:2.5rem}
-.nav-link{font-size:0.72rem;color:var(--tx-on-dark-sub);letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;transition:color 0.2s;background:none;border:none;font-family:'Noto Sans JP',sans-serif}
+.nav-links{display:flex;align-items:center;gap:2.2rem}
+.nav-link{font-size:0.72rem;color:var(--tx-on-dark-sub);letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;transition:color 0.2s;background:none;border:none;font-weight:300}
 .nav-link:hover{color:var(--tx-on-dark)}
-.nav-cta{font-size:0.72rem;font-weight:500;letter-spacing:0.1em;color:var(--tx-on-dark);border:1px solid rgba(255,255,255,0.35);padding:0.45rem 1.1rem;cursor:pointer;transition:all 0.2s;text-transform:uppercase;background:transparent;font-family:'Noto Sans JP',sans-serif}
+.nav-cta{font-size:0.72rem;font-weight:400;letter-spacing:0.1em;color:var(--tx-on-dark);border:1px solid rgba(255,255,255,0.35);padding:0.45rem 1.1rem;cursor:pointer;transition:all 0.2s;text-transform:uppercase;background:transparent}
 .nav-cta:hover{background:var(--orange);border-color:var(--orange)}
 .hero{min-height:100vh;background:var(--navy);display:flex;flex-direction:column;justify-content:center;padding:9rem 4rem 6rem;position:relative;overflow:hidden}
-.hero-bg-char{position:absolute;top:50%;right:-2rem;transform:translateY(-50%);font-family:'Bebas Neue',sans-serif;font-size:clamp(14rem,28vw,30rem);color:rgba(255,255,255,0.025);line-height:1;pointer-events:none;white-space:nowrap;letter-spacing:-0.02em}
-.hero-inner{max-width:820px;position:relative;z-index:2}
-.hero-eyebrow{font-size:0.68rem;letter-spacing:0.28em;color:var(--orange);text-transform:uppercase;margin-bottom:2.5rem;display:flex;align-items:center;gap:0.75rem}
+.hero::after{content:'';position:absolute;right:-12rem;top:20%;width:38rem;height:38rem;background:radial-gradient(circle,rgba(242,101,34,0.12),transparent 62%);pointer-events:none}
+.hero-bg-char{position:absolute;top:50%;right:-2rem;transform:translateY(-50%);font-family:'Source Sans 3',sans-serif;font-size:clamp(14rem,28vw,30rem);color:rgba(255,255,255,0.025);line-height:1;pointer-events:none;white-space:nowrap;letter-spacing:-0.05em;font-weight:300}
+.hero-inner{max-width:900px;position:relative;z-index:2}
+.hero-eyebrow{font-size:0.68rem;letter-spacing:0.28em;color:var(--orange);text-transform:uppercase;margin-bottom:2.5rem;display:flex;align-items:center;gap:0.75rem;font-family:'Source Sans 3',sans-serif;font-weight:400}
 .hero-eyebrow::before{content:'';display:block;width:2rem;height:1px;background:var(--orange)}
-.hero-headline{font-family:'Noto Serif JP',serif;font-size:clamp(2.2rem,4.5vw,3.8rem);font-weight:300;color:var(--tx-on-dark);line-height:1.55;margin-bottom:2rem;letter-spacing:0.015em}
+.hero-headline{font-size:clamp(2.35rem,4.6vw,4.1rem);font-weight:300;color:var(--tx-on-dark);line-height:1.48;margin-bottom:2rem;letter-spacing:0.02em}
 .hero-headline em{font-style:normal;color:var(--orange);font-weight:400}
-.hero-sub{font-size:0.96rem;color:var(--tx-on-dark-sub);max-width:560px;line-height:2.1;margin-bottom:3.5rem;font-weight:400}
+.hero-sub{font-size:0.96rem;color:var(--tx-on-dark-sub);max-width:650px;line-height:2.15;margin-bottom:3.5rem;font-weight:300}
 .hero-cta-group{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap}
-.btn-fill{background:var(--orange);color:#fff;border:none;padding:1rem 2.5rem;font-size:0.86rem;font-weight:500;letter-spacing:0.06em;cursor:pointer;transition:background 0.2s;font-family:'Noto Sans JP',sans-serif}
+.btn-fill{background:var(--orange);color:#fff;border:none;padding:1rem 2.5rem;font-size:0.86rem;font-weight:400;letter-spacing:0.06em;cursor:pointer;transition:background 0.2s}
 .btn-fill:hover{background:var(--orange-soft)}
-.btn-ghost{background:none;border:1px solid rgba(255,255,255,0.3);color:var(--tx-on-dark-sub);padding:1rem 2.5rem;font-size:0.86rem;cursor:pointer;transition:all 0.2s;font-family:'Noto Sans JP',sans-serif}
+.btn-ghost{background:none;border:1px solid rgba(255,255,255,0.3);color:var(--tx-on-dark-sub);padding:1rem 2.5rem;font-size:0.86rem;cursor:pointer;transition:all 0.2s;font-weight:300}
 .btn-ghost:hover{border-color:rgba(255,255,255,0.6);color:var(--tx-on-dark)}
-.hero-scroll{position:absolute;bottom:2.5rem;left:4rem;display:flex;align-items:center;gap:0.75rem;color:var(--tx-on-dark-muted);font-size:0.65rem;letter-spacing:0.22em;text-transform:uppercase}
+.hero-note{margin-top:2.25rem;color:var(--tx-on-dark-muted);font-size:0.76rem;letter-spacing:0.02em;line-height:1.8}
+.hero-scroll{position:absolute;bottom:2.5rem;left:4rem;display:flex;align-items:center;gap:0.75rem;color:var(--tx-on-dark-muted);font-size:0.65rem;letter-spacing:0.22em;text-transform:uppercase;font-family:'Source Sans 3',sans-serif}
 .scroll-bar{width:2.5rem;height:1px;background:rgba(255,255,255,0.15);position:relative;overflow:hidden}
 .scroll-bar::after{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:var(--orange);animation:sa 2.2s ease-in-out infinite}
 @keyframes sa{0%{left:-100%}100%{left:100%}}
 .wrap{max-width:1040px;margin:0 auto}
-.eyebrow{font-size:0.65rem;letter-spacing:0.26em;color:var(--orange);text-transform:uppercase;margin-bottom:0.9rem;display:flex;align-items:center;gap:0.6rem}
+.eyebrow{font-size:0.65rem;letter-spacing:0.26em;color:var(--orange);text-transform:uppercase;margin-bottom:0.9rem;display:flex;align-items:center;gap:0.6rem;font-family:'Source Sans 3',sans-serif;font-weight:400}
 .eyebrow::before{content:'';display:block;width:1.2rem;height:1px;background:var(--orange)}
-.sec-title{font-family:'Noto Serif JP',serif;font-size:clamp(1.5rem,2.8vw,2.3rem);font-weight:300;line-height:1.65;color:var(--tx-primary);margin-bottom:0.75rem}
-.sec-title em{font-style:normal;color:var(--orange)}
-.sec-lead{font-size:0.9rem;color:var(--tx-sub);line-height:2;font-weight:400;max-width:520px;margin-bottom:3rem}
+.sec-title{font-size:clamp(1.55rem,2.8vw,2.45rem);font-weight:300;line-height:1.65;color:var(--tx-primary);margin-bottom:0.75rem;letter-spacing:0.02em}
+.sec-title em{font-style:normal;color:var(--orange);font-weight:400}
+.sec-lead{font-size:0.9rem;color:var(--tx-sub);line-height:2.05;font-weight:300;max-width:640px;margin-bottom:3rem}
 .context{padding:5.5rem 4rem;background:var(--white)}
 .issue-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);margin-top:2.5rem}
 .issue-card{background:var(--white);padding:2rem 1.75rem;transition:background 0.2s;position:relative}
 .issue-card:hover{background:var(--cream)}
 .issue-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:transparent;transition:background 0.25s}
 .issue-card:hover::before{background:var(--orange)}
-.issue-num{font-family:'Bebas Neue',sans-serif;font-size:1.8rem;color:var(--rule);line-height:1;margin-bottom:0.75rem}
-.issue-text{font-size:0.88rem;color:var(--tx-body);line-height:1.9;font-weight:400}
+.issue-num{font-family:'Source Sans 3',sans-serif;font-size:1.55rem;color:var(--rule);line-height:1;margin-bottom:0.85rem;font-weight:300;letter-spacing:0.06em}
+.issue-text{font-size:0.88rem;color:var(--tx-body);line-height:1.95;font-weight:300}
 .what{padding:5.5rem 4rem;background:var(--navy);position:relative;overflow:hidden}
-.what-accent{position:absolute;top:0;right:0;width:35%;height:100%;background:linear-gradient(135deg,transparent 60%,rgba(232,92,26,0.04));pointer-events:none}
-.what .eyebrow{color:var(--orange)}
-.what .eyebrow::before{background:var(--orange)}
+.what-accent{position:absolute;top:0;right:0;width:35%;height:100%;background:linear-gradient(135deg,transparent 60%,rgba(242,101,34,0.05));pointer-events:none}
 .what .sec-title{color:var(--tx-on-dark)}
-.what-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:rgba(255,255,255,0.06);margin-top:2.5rem}
-.what-item{background:var(--navy-mid);padding:2rem 2rem;transition:background 0.2s;position:relative;overflow:hidden}
-.what-item:hover{background:#1c2f55}
-.what-item::before{content:'';position:absolute;left:0;top:0;width:3px;height:100%;background:rgba(232,92,26,0.3);transition:background 0.25s}
+.what .sec-lead{color:var(--tx-on-dark-sub)}
+.service-core{display:grid;grid-template-columns:1.1fr 0.9fr;gap:1px;background:rgba(255,255,255,0.08);margin-top:2.5rem}
+.core-card{background:var(--navy-mid);padding:2.5rem;position:relative;overflow:hidden}
+.core-card.main{border-top:3px solid var(--orange)}
+.core-label{display:inline-block;font-size:0.62rem;letter-spacing:0.16em;text-transform:uppercase;color:#fff;background:var(--orange);padding:0.22rem 0.72rem;margin-bottom:1.2rem;font-family:'Source Sans 3',sans-serif}
+.core-kicker{font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--tx-on-dark-muted);margin-bottom:0.75rem;font-family:'Source Sans 3',sans-serif}
+.core-title{font-size:1.25rem;font-weight:400;color:var(--tx-on-dark);margin-bottom:0.8rem;line-height:1.55}
+.core-text{font-size:0.86rem;color:var(--tx-on-dark-sub);line-height:2;font-weight:300}
+.core-list{margin-top:1.5rem;display:grid;gap:0.65rem}
+.core-list li{list-style:none;color:var(--tx-on-dark-sub);font-size:0.8rem;line-height:1.75;position:relative;padding-left:1.1rem}
+.core-list li::before{content:'';position:absolute;left:0;top:0.72em;width:0.35rem;height:0.35rem;background:var(--orange)}
+.what-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,0.06);margin-top:1px}
+.what-item{background:var(--navy-mid);padding:1.75rem;transition:background 0.2s;position:relative;overflow:hidden}
+.what-item:hover{background:#24345F}
+.what-item::before{content:'';position:absolute;left:0;top:0;width:3px;height:100%;background:rgba(242,101,34,0.25);transition:background 0.25s}
 .what-item:hover::before{background:var(--orange)}
-.what-item-title{font-size:0.92rem;font-weight:500;color:var(--tx-on-dark);margin-bottom:0.5rem}
-.what-item-desc{font-size:0.8rem;color:var(--tx-on-dark-sub);line-height:1.85;font-weight:400}
+.what-item-title{font-size:0.92rem;font-weight:400;color:var(--tx-on-dark);margin-bottom:0.5rem}
+.what-item-desc{font-size:0.79rem;color:var(--tx-on-dark-sub);line-height:1.85;font-weight:300}
 .why{padding:5.5rem 4rem;background:var(--cream)}
-.why-flow{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;align-items:center;gap:1rem;margin-top:2.5rem}
-.why-step{background:var(--white);border:1px solid var(--rule);padding:2rem 1.5rem;text-align:center}
-.why-step-num{font-family:'Bebas Neue',sans-serif;font-size:1.6rem;color:var(--orange);line-height:1;margin-bottom:0.5rem}
-.why-step-title{font-size:0.92rem;font-weight:500;color:var(--tx-primary);margin-bottom:0.5rem}
-.why-step-desc{font-size:0.78rem;color:var(--tx-sub);line-height:1.8}
-.why-arrow{font-size:1.4rem;color:var(--rule);text-align:center}
+.why-flow{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;align-items:stretch;gap:1rem;margin-top:2.5rem}
+.why-step{background:var(--white);border:1px solid var(--rule);padding:2rem 1.5rem;text-align:center;display:flex;flex-direction:column;justify-content:flex-start}
+.why-step-num{font-family:'Source Sans 3',sans-serif;font-size:1.45rem;color:var(--orange);line-height:1;margin-bottom:0.6rem;font-weight:300;letter-spacing:0.08em}
+.why-step-title{font-size:0.92rem;font-weight:400;color:var(--tx-primary);margin-bottom:0.5rem}
+.why-step-desc{font-size:0.78rem;color:var(--tx-sub);line-height:1.85;font-weight:300}
+.why-arrow{font-size:1.4rem;color:var(--rule);text-align:center;align-self:center}
 .why-result{margin-top:2.5rem;background:var(--navy);padding:2rem 2.5rem;display:grid;grid-template-columns:auto 1fr;gap:2rem;align-items:center}
-.why-result-label{font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--orange);white-space:nowrap}
-.why-result-text{font-family:'Noto Serif JP',serif;font-size:1.1rem;font-weight:300;color:var(--tx-on-dark);line-height:1.7}
+.why-result-label{font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--orange);white-space:nowrap;font-family:'Source Sans 3',sans-serif}
+.why-result-text{font-size:1.08rem;font-weight:300;color:var(--tx-on-dark);line-height:1.8}
 .howto{padding:5.5rem 4rem;background:var(--white)}
 .eng-list{display:flex;flex-direction:column;gap:1px;background:var(--rule);margin-top:2.5rem}
-.eng-row{background:var(--white);display:grid;grid-template-columns:4rem minmax(0,13rem) minmax(0,1fr);align-items:start;transition:background 0.2s;overflow:hidden}
+.eng-row{background:var(--white);display:grid;grid-template-columns:4rem minmax(0,14rem) minmax(0,1fr);align-items:start;transition:background 0.2s;overflow:hidden}
 .eng-row:hover{background:#FAFAF8}
 .eng-row.feat{background:var(--navy)}
 .eng-row.feat:hover{background:var(--navy-mid)}
-.eng-row.impl{border-left:3px solid var(--orange)}
-.eng-row-num{font-family:'Bebas Neue',sans-serif;font-size:2.6rem;color:var(--rule);line-height:1;padding:2.25rem 0 2.25rem 2rem;flex-shrink:0}
-.eng-row.feat .eng-row-num{color:rgba(255,255,255,0.1)}
-.eng-row.impl .eng-row-num{color:rgba(232,92,26,0.2)}
+.eng-row.upstream{border-left:3px solid var(--rule);opacity:0.95}
+.eng-row-num{font-family:'Source Sans 3',sans-serif;font-size:2.25rem;color:var(--rule);line-height:1;padding:2.25rem 0 2.25rem 2rem;flex-shrink:0;font-weight:300;letter-spacing:0.06em}
+.eng-row.feat .eng-row-num{color:rgba(255,255,255,0.14)}
 .eng-row-left{padding:2.25rem 2rem 2.25rem 1.25rem;border-right:1px solid var(--rule);min-width:0}
 .eng-row.feat .eng-row-left{border-color:rgba(255,255,255,0.08)}
-.eng-row.impl .eng-row-left{border-color:rgba(232,92,26,0.12)}
-.eng-badge{display:inline-block;font-size:0.6rem;letter-spacing:0.14em;text-transform:uppercase;padding:0.18rem 0.65rem;background:var(--orange);color:#fff;font-family:'Noto Sans JP',sans-serif;margin-bottom:0.6rem;white-space:nowrap}
-.eng-row-h{font-size:0.95rem;font-weight:500;color:var(--tx-primary);line-height:1.45;margin-bottom:0.3rem}
+.eng-badge{display:inline-block;font-size:0.6rem;letter-spacing:0.14em;text-transform:uppercase;padding:0.18rem 0.65rem;background:var(--orange);color:#fff;margin-bottom:0.6rem;white-space:nowrap;font-family:'Source Sans 3',sans-serif}
+.eng-row-h{font-size:0.95rem;font-weight:400;color:var(--tx-primary);line-height:1.45;margin-bottom:0.3rem}
 .eng-row.feat .eng-row-h{color:var(--tx-on-dark)}
-.eng-row-price{font-family:'Bebas Neue',sans-serif;font-size:1.35rem;color:var(--orange);line-height:1}
+.eng-row-price{font-family:'Source Sans 3',sans-serif;font-size:1rem;color:var(--orange);line-height:1.35;letter-spacing:0.08em;text-transform:uppercase;font-weight:400}
 .eng-row-right{padding:2.25rem 2.5rem;min-width:0}
-.eng-row-p{font-size:0.84rem;color:var(--tx-body);line-height:1.95;font-weight:400;margin-bottom:1rem;overflow-wrap:break-word}
+.eng-row-p{font-size:0.84rem;color:var(--tx-body);line-height:1.95;font-weight:300;margin-bottom:1rem;overflow-wrap:break-word}
 .eng-row.feat .eng-row-p{color:var(--tx-on-dark-sub)}
-.eng-row-scope{font-size:0.74rem;color:var(--tx-sub);line-height:1.75;font-weight:400;overflow-wrap:break-word}
+.eng-row-scope{font-size:0.74rem;color:var(--tx-sub);line-height:1.75;font-weight:300;overflow-wrap:break-word}
 .eng-row.feat .eng-row-scope{color:var(--tx-on-dark-muted)}
-.eng-row.impl .eng-row-scope{color:rgba(232,92,26,0.75)}
-.eng-scope-label{font-size:0.6rem;letter-spacing:0.13em;text-transform:uppercase;color:var(--tx-muted);margin-right:0.5rem}
+.eng-scope-label{font-size:0.6rem;letter-spacing:0.13em;text-transform:uppercase;color:var(--tx-muted);margin-right:0.5rem;font-family:'Source Sans 3',sans-serif}
 .eng-row.feat .eng-scope-label{color:var(--tx-on-dark-muted)}
-.eng-row.impl .eng-scope-label{color:rgba(232,92,26,0.55)}
-
-
-
-
-.scope-col-head.incl{background:var(--navy)}
-.scope-col-head.excl{background:var(--rule)}
-
-.scope-col-head.incl 
-.scope-col-head.excl 
-
+.scope{padding:5.5rem 4rem;background:var(--cream)}
+.scope-table{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule);margin-top:2.5rem}
+.scope-col{background:var(--white)}
+.scope-head{padding:1rem 1.4rem;font-size:0.72rem;letter-spacing:0.16em;text-transform:uppercase;font-family:'Source Sans 3',sans-serif;color:#fff;background:var(--navy)}
+.scope-head.no{background:#8B929E}
+.scope-item{padding:1rem 1.4rem;border-bottom:1px solid var(--rule);font-size:0.82rem;line-height:1.85;color:var(--tx-body);font-weight:300}
 .scope-item:last-child{border-bottom:none}
-.scope-item.incl-item{background:var(--white)}
-.scope-item.incl-item:nth-child(even){background:var(--cream)}
-.scope-item.excl-item{background:var(--white);opacity:0.65}
-.scope-item.excl-item:nth-child(even){background:var(--cream)}
-
-.scope-dot.o{background:var(--navy)}
-.scope-dot.x{background:var(--rule)}
-
-
+.scope-note{margin-top:1.4rem;font-size:0.78rem;color:var(--tx-sub);line-height:1.9}
 .sector{padding:5.5rem 4rem;background:var(--white)}
 .sector-list{margin-top:2.5rem;display:flex;flex-direction:column}
 .sector-row{display:grid;grid-template-columns:3rem 1fr 2.5fr auto;align-items:center;gap:2rem;padding:1.75rem 0;border-bottom:1px solid var(--rule);transition:background 0.2s}
 .sector-row:first-child{border-top:1px solid var(--rule)}
 .sector-row:hover{background:var(--cream);margin:0 -1rem;padding-left:1rem;padding-right:1rem}
-.sector-n{font-family:'Bebas Neue',sans-serif;font-size:1.6rem;color:var(--rule);line-height:1}
-.sector-h{font-size:0.92rem;font-weight:500;color:var(--tx-primary)}
-.sector-p{font-size:0.82rem;color:var(--tx-body);font-weight:400;line-height:1.85}
-.sector-tag{font-size:0.62rem;letter-spacing:0.13em;color:var(--orange);border:1px solid rgba(232,92,26,0.25);padding:0.22rem 0.7rem;text-transform:uppercase;white-space:nowrap}
+.sector-n{font-family:'Source Sans 3',sans-serif;font-size:1.45rem;color:var(--rule);line-height:1;font-weight:300;letter-spacing:0.08em}
+.sector-h{font-size:0.92rem;font-weight:400;color:var(--tx-primary)}
+.sector-p{font-size:0.82rem;color:var(--tx-body);font-weight:300;line-height:1.85}
+.sector-tag{font-size:0.62rem;letter-spacing:0.13em;color:var(--orange);border:1px solid rgba(242,101,34,0.25);padding:0.22rem 0.7rem;text-transform:uppercase;white-space:nowrap;font-family:'Source Sans 3',sans-serif}
 .cta{padding:7rem 4rem;background:var(--navy);text-align:center;position:relative;overflow:hidden}
-.cta-glow{position:absolute;bottom:-4rem;left:50%;transform:translateX(-50%);width:600px;height:300px;background:radial-gradient(ellipse,rgba(232,92,26,0.09) 0%,transparent 70%);pointer-events:none}
+.cta-glow{position:absolute;bottom:-4rem;left:50%;transform:translateX(-50%);width:600px;height:300px;background:radial-gradient(ellipse,rgba(242,101,34,0.11) 0%,transparent 70%);pointer-events:none}
 .cta-inner{position:relative;z-index:2}
-.cta-eyebrow{font-size:0.65rem;letter-spacing:0.26em;color:var(--orange);text-transform:uppercase;margin-bottom:1.5rem;display:flex;align-items:center;justify-content:center;gap:0.75rem}
+.cta-eyebrow{font-size:0.65rem;letter-spacing:0.26em;color:var(--orange);text-transform:uppercase;margin-bottom:1.5rem;display:flex;align-items:center;justify-content:center;gap:0.75rem;font-family:'Source Sans 3',sans-serif}
 .cta-eyebrow::before,.cta-eyebrow::after{content:'';display:block;width:2rem;height:1px;background:var(--orange)}
-.cta-title{font-family:'Noto Serif JP',serif;font-size:clamp(1.7rem,3.2vw,2.6rem);font-weight:300;color:var(--tx-on-dark);line-height:1.7;margin-bottom:1.25rem}
-.cta-title em{font-style:normal;color:var(--orange)}
-.cta-body{font-size:0.9rem;color:var(--tx-on-dark-sub);margin-bottom:3rem;font-weight:400;line-height:2}
-.cta-btn{display:inline-block;background:var(--orange);color:#fff;border:none;padding:1.1rem 3.25rem;font-size:0.88rem;font-weight:500;letter-spacing:0.07em;cursor:pointer;transition:background 0.2s;font-family:'Noto Sans JP',sans-serif}
+.cta-title{font-size:clamp(1.7rem,3.2vw,2.6rem);font-weight:300;color:var(--tx-on-dark);line-height:1.7;margin-bottom:1.25rem}
+.cta-title em{font-style:normal;color:var(--orange);font-weight:400}
+.cta-body{font-size:0.9rem;color:var(--tx-on-dark-sub);margin-bottom:3rem;font-weight:300;line-height:2}
+.cta-btn{display:inline-block;background:var(--orange);color:#fff;border:none;padding:1.1rem 3.25rem;font-size:0.88rem;font-weight:400;letter-spacing:0.07em;cursor:pointer;transition:background 0.2s}
 .cta-btn:hover{background:var(--orange-soft)}
 footer{background:#07101F;padding:2.75rem 4rem;border-top:1px solid rgba(255,255,255,0.06)}
 .footer-rule{max-width:1040px;margin:0 auto 1.75rem;border:none;border-top:1px solid rgba(255,255,255,0.05)}
 .footer-inner{max-width:1040px;margin:0 auto;display:grid;grid-template-columns:auto 1fr auto;align-items:start;gap:3rem}
-.footer-logo{font-family:'Bebas Neue',sans-serif;font-size:1.3rem;color:rgba(255,255,255,0.3);letter-spacing:0.12em;line-height:1;padding-top:0.15rem}
-.footer-logo span{color:rgba(232,92,26,0.5)}
+.footer-logo{font-family:'Source Sans 3',sans-serif;font-size:1.15rem;color:rgba(255,255,255,0.32);letter-spacing:0.18em;line-height:1;padding-top:0.15rem;font-weight:300}
+.footer-logo span{color:rgba(242,101,34,0.6)}
 .footer-mid{display:flex;gap:3.5rem}
-.footer-col-label{font-size:0.6rem;letter-spacing:0.2em;color:rgba(255,255,255,0.2);text-transform:uppercase;margin-bottom:0.6rem;display:block}
-.footer-col-val{font-size:0.75rem;color:var(--tx-on-dark-muted);line-height:1.95;font-weight:400}
+.footer-col-label{font-size:0.6rem;letter-spacing:0.2em;color:rgba(255,255,255,0.2);text-transform:uppercase;margin-bottom:0.6rem;display:block;font-family:'Source Sans 3',sans-serif}
+.footer-col-val{font-size:0.75rem;color:var(--tx-on-dark-muted);line-height:1.95;font-weight:300}
 .footer-col-val a{color:var(--tx-on-dark-muted);text-decoration:none;transition:color 0.2s}
 .footer-col-val a:hover{color:var(--tx-on-dark-sub)}
 .footer-right{display:flex;flex-direction:column;align-items:flex-end;gap:0.45rem;padding-top:0.15rem}
@@ -160,8 +167,10 @@ footer{background:#07101F;padding:2.75rem 4rem;border-top:1px solid rgba(255,255
 @media(max-width:900px){
   nav{padding:1rem 1.5rem}.nav-links{display:none}
   .hero{padding:7rem 1.5rem 4rem}
+  .hero-scroll{left:1.5rem}
   .context,.what,.why,.howto,.scope,.sector,.cta{padding:4rem 1.5rem}
   .issue-grid{grid-template-columns:1fr}
+  .service-core{grid-template-columns:1fr}
   .what-grid{grid-template-columns:1fr}
   .why-flow{grid-template-columns:1fr;gap:0.5rem}
   .why-arrow{transform:rotate(90deg)}
@@ -170,7 +179,7 @@ footer{background:#07101F;padding:2.75rem 4rem;border-top:1px solid rgba(255,255
   .eng-row-left{grid-column:2;padding:1.5rem 1.5rem 0.5rem 0.75rem;border-right:none}
   .eng-row-right{grid-column:2;padding:0.5rem 1.5rem 1.75rem 0.75rem}
   .eng-row-num{padding:1.5rem 0 0 1.25rem;font-size:2rem;grid-row:1 / span 2}
-  
+  .scope-table{grid-template-columns:1fr}
   .sector-row{grid-template-columns:2.5rem 1fr;gap:1rem}.sector-p,.sector-tag{display:none}
   footer{padding:1.75rem 1.5rem}
   .footer-inner{grid-template-columns:1fr;gap:1.75rem}
@@ -184,29 +193,30 @@ footer{background:#07101F;padding:2.75rem 4rem;border-top:1px solid rgba(255,255
 <nav>
   <div class="nav-logo">LOC<span>A</span>BLE</div>
   <div class="nav-links">
-    <button class="nav-link">できること</button>
-    <button class="nav-link">頼み方</button>
-    <button class="nav-link">領域</button>
+    <button class="nav-link" onclick="document.querySelector('#service').scrollIntoView({behavior:'smooth'})">Service</button>
+    <button class="nav-link" onclick="document.querySelector('#start').scrollIntoView({behavior:'smooth'})">Start</button>
+    <button class="nav-link" onclick="document.querySelector('#sector').scrollIntoView({behavior:'smooth'})">Sector</button>
   </div>
-  <button class="nav-cta">相談する</button>
+  <button class="nav-cta" onclick="document.querySelector('#contact').scrollIntoView({behavior:'smooth'})">Contact</button>
 </nav>
 
 <section class="hero">
   <div class="hero-bg-char">L</div>
   <div class="hero-inner">
-    <div class="hero-eyebrow">Location Business Produce</div>
+    <div class="hero-eyebrow">Digital Content Implementation & Project Management</div>
     <h1 class="hero-headline">
-      内容を理解した上で、<br>
-      <em>かたちにするところまで</em>動く。
+      デジタルコンテンツを、<br>
+      <em>リアルな空間で動く体験</em>にする。
     </h1>
     <p class="hero-sub">
-      空間・体験・デジタル・運営をひとつながりで考え、<br>
-      企画が止まらず、現場で崩れないよう、最後まで関わります。
+      映像・センサー・インタラクション・演出・什器・施工・運営。<br>
+      デジタル施策を「企画書の中のアイデア」で終わらせず、現場で成立する状態まで実装・調整・推進します。
     </p>
     <div class="hero-cta-group">
-      <button class="btn-fill">まず相談してみる</button>
-      <button class="btn-ghost">できることを見る</button>
+      <button class="btn-fill" onclick="document.querySelector('#contact').scrollIntoView({behavior:'smooth'})">実装・PMを相談する</button>
+      <button class="btn-ghost" onclick="document.querySelector('#service').scrollIntoView({behavior:'smooth'})">できることを見る</button>
     </div>
+    <p class="hero-note">企画構想からの相談も可能です。ただしLOCABLEの主力は、構想を現場で動く形に落とし込む実装力とPM力です。</p>
   </div>
   <div class="hero-scroll"><div class="scroll-bar"></div>scroll</div>
 </section>
@@ -215,66 +225,93 @@ footer{background:#07101F;padding:2.75rem 4rem;border-top:1px solid rgba(255,255
   <div class="wrap">
     <div class="eyebrow">Context</div>
     <h2 class="sec-title">こんな時に、<em>LOCABLEが入ります</em></h2>
-    <p class="sec-lead">企画が止まっている。現場で話が変わる。誰も前に進められない。そういった状態を解消するのが、LOCABLEの仕事です。</p>
+    <p class="sec-lead">デジタルコンテンツは、作るだけでは現場で成立しません。空間条件、機材、施工、導線、運営、保守までつながって初めて、リアルな体験になります。</p>
     <div class="issue-grid">
       <div class="issue-card fu">
         <div class="issue-num">01</div>
-        <div class="issue-text">やりたいことはあるのに、何から手をつければいいか分からない</div>
+        <div class="issue-text">映像・センサー・演出などのデジタル施策を、実空間にどう実装すればよいか分からない</div>
       </div>
       <div class="issue-card fu">
         <div class="issue-num">02</div>
-        <div class="issue-text">デジタルの施策と、空間・現場の運営がバラバラに動いている</div>
+        <div class="issue-text">コンテンツ制作会社、施工会社、設備会社、施設側の会話がかみ合っていない</div>
       </div>
       <div class="issue-card fu">
         <div class="issue-num">03</div>
-        <div class="issue-text">企画が進むにつれて、最初に決めたことが薄れていく</div>
+        <div class="issue-text">企画は面白いが、現場条件・安全性・運用負荷を踏まえると成立するか不安がある</div>
       </div>
       <div class="issue-card fu">
         <div class="issue-num">04</div>
-        <div class="issue-text">関わる人が多く、誰が何を決めるのかが整理されていない</div>
+        <div class="issue-text">プロジェクター、センサー、PC、音響、配線、什器、内装の取り合いを整理する人がいない</div>
       </div>
       <div class="issue-card fu">
         <div class="issue-num">05</div>
-        <div class="issue-text">体験イベントをやっても、売上や次の来店につながらない</div>
+        <div class="issue-text">開業・イベント本番までに、誰が何を決めるべきか曖昧なまま進んでいる</div>
       </div>
       <div class="issue-card fu">
         <div class="issue-num">06</div>
-        <div class="issue-text">場所としての魅力はあるのに、事業としてうまく回っていない</div>
+        <div class="issue-text">一度作って終わりではなく、運営しながら改善できる体制まで整えたい</div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="what">
+<section class="what" id="service">
   <div class="what-accent"></div>
   <div class="wrap">
     <div class="eyebrow">What we do</div>
-    <h2 class="sec-title">かたちにできる。<br>だからこそ、<em>企画の段階から任せられる。</em></h2>
-    <p class="sec-lead" style="color:var(--tx-on-dark-sub)">設計や進行管理を引き受けながら、その前提にある企画の整理と実現できる条件づくりまで一緒に担います。</p>
+    <h2 class="sec-title">主力は、<em>実装とPM</em>。<br>必要に応じて、企画構想までさかのぼります。</h2>
+    <p class="sec-lead">LOCABLEは、デジタルコンテンツをリアルな空間に実装するための翻訳者であり、推進役です。構想・制作・施工・運営の間に入り、現場で動く状態まで整えます。</p>
+
+    <div class="service-core">
+      <div class="core-card main fu">
+        <div class="core-label">Core Service</div>
+        <div class="core-kicker">Implementation / PM</div>
+        <h3 class="core-title">デジタルコンテンツ実装・開業PM</h3>
+        <p class="core-text">体験コンテンツを空間に実装するために、機材条件、施工条件、運営条件、関係者の役割分担を整理し、開業・本番までの推進を担います。</p>
+        <ul class="core-list">
+          <li>機材・什器・配線・設置条件の整理</li>
+          <li>コンテンツ制作会社、施工会社、施設側の調整</li>
+          <li>スケジュール、課題、意思決定事項の管理</li>
+          <li>現地確認、図面・レイアウト・運用条件の確認</li>
+        </ul>
+      </div>
+      <div class="core-card fu">
+        <div class="core-kicker">Extension</div>
+        <h3 class="core-title">企画構想・体験設計</h3>
+        <p class="core-text">実装の前提が曖昧な場合は、体験の狙い、対象者、導線、収益・運営との接続まで整理します。上流だけを語るのではなく、実装可能性を踏まえた構想に落とし込みます。</p>
+        <ul class="core-list">
+          <li>体験コンセプトの整理</li>
+          <li>成立条件と制約条件の可視化</li>
+          <li>提案書・企画書の構造整理</li>
+          <li>事業・運営への接続整理</li>
+        </ul>
+      </div>
+    </div>
+
     <div class="what-grid">
       <div class="what-item fu">
-        <div class="what-item-title">企画の整理</div>
-        <div class="what-item-desc">何を目指すのか、何があれば進められるのかを言葉にして、判断できる状態をつくる</div>
+        <div class="what-item-title">実装条件の整理</div>
+        <div class="what-item-desc">プロジェクター、センサー、PC、音響、照明、配線、什器、施工の条件を現場目線で整理します。</div>
       </div>
       <div class="what-item fu">
-        <div class="what-item-title">実現できる条件づくり</div>
-        <div class="what-item-desc">誰が何を決めれば次に進めるかを整理して、企画が途中でしぼまないようにする</div>
+        <div class="what-item-title">関係者間の翻訳</div>
+        <div class="what-item-desc">制作会社、設計施工、施設運営、クライアントの間で、言葉と判断基準をそろえます。</div>
       </div>
       <div class="what-item fu">
-        <div class="what-item-title">設計・進行管理</div>
-        <div class="what-item-desc">空間・デジタル・体験・運営をまたいで、実際に形になるまでの進行を担う</div>
+        <div class="what-item-title">プロジェクト推進</div>
+        <div class="what-item-desc">課題、スケジュール、決定事項を管理し、開業・本番まで止まらない状態をつくります。</div>
       </div>
       <div class="what-item fu">
-        <div class="what-item-title">関係者の話の整理</div>
-        <div class="what-item-desc">議論がかみ合っていない場面で、話の筋を整理して前に進める</div>
+        <div class="what-item-title">現地・図面確認</div>
+        <div class="what-item-desc">現地条件や図面を見ながら、設置・導線・安全・保守に関わる論点を洗い出します。</div>
       </div>
       <div class="what-item fu">
-        <div class="what-item-title">現場に合った条件の確認</div>
-        <div class="what-item-desc">設計・工事・デジタル・運営それぞれの現場事情を踏まえて、実際に動く条件を決める</div>
+        <div class="what-item-title">運営条件への接続</div>
+        <div class="what-item-desc">開業後にスタッフが運用できるか、トラブル時に対応できるかまで含めて整えます。</div>
       </div>
       <div class="what-item fu">
-        <div class="what-item-title">提案・商談前の確認</div>
-        <div class="what-item-desc">提案書や企画書を一緒に見直して、話が通る精度に仕上げる</div>
+        <div class="what-item-title">企画構想の補強</div>
+        <div class="what-item-desc">必要な場合は、体験の狙い・収益・再来訪・売場接続までさかのぼって整理します。</div>
       </div>
     </div>
   </div>
@@ -283,113 +320,139 @@ footer{background:#07101F;padding:2.75rem 4rem;border-top:1px solid rgba(255,255
 <section class="why">
   <div class="wrap">
     <div class="eyebrow">Why it works</div>
-    <h2 class="sec-title">強みは作れることではなく、<br><em>作っても崩れないように、最初から整えられること</em>です。</h2>
+    <h2 class="sec-title">強みは、<br><em>デジタルと空間の間で起きるズレを、現場で潰せること</em>です。</h2>
     <div class="why-flow">
       <div class="why-step fu">
         <div class="why-step-num">01</div>
-        <div class="why-step-title">現場を知っている</div>
-        <div class="why-step-desc">設計・工事・運営・デジタルの現場感覚があるから、企画が現場でひっくり返らない。</div>
+        <div class="why-step-title">空間条件が分かる</div>
+        <div class="why-step-desc">建築・内装・設備・導線・安全性を踏まえて、コンテンツが成立する条件を読める。</div>
       </div>
       <div class="why-arrow fu">→</div>
       <div class="why-step fu">
         <div class="why-step-num">02</div>
-        <div class="why-step-title">つながりで考える</div>
-        <div class="why-step-desc">企画・体験・空間・収益をバラバラに見ない。全体がつながるように整理できる。</div>
+        <div class="why-step-title">デジタル実装が分かる</div>
+        <div class="why-step-desc">映像・センサー・インタラクション・機材構成を、現場運用に接続して考えられる。</div>
       </div>
       <div class="why-arrow fu">→</div>
       <div class="why-step fu">
         <div class="why-step-num">03</div>
-        <div class="why-step-title">話を前に進める</div>
-        <div class="why-step-desc">誰が何を決めればいいかを明確にして、止まっている話を動かせる。</div>
+        <div class="why-step-title">PMとして前に進める</div>
+        <div class="why-step-desc">誰が何を決めるかを明確にし、制作・施工・運営の間で止まる論点を動かせる。</div>
       </div>
     </div>
     <div class="why-result fu">
-      <div class="why-result-label">だから</div>
-      <div class="why-result-text">企画の段階から関われる。現場で崩れない。<br>だから設計も進行管理も、安心して任せてもらえる。</div>
+      <div class="why-result-label">Result</div>
+      <div class="why-result-text">企画で終わらない。制作だけで終わらない。<br>リアルな空間で、来場者が体験できる状態まで持っていく。</div>
     </div>
   </div>
 </section>
 
-<section class="howto">
+<section class="howto" id="start">
   <div class="wrap">
     <div class="eyebrow">How to start</div>
     <h2 class="sec-title">3つの<em>頼み方</em></h2>
-    <p class="sec-lead">何を、どの単位で相談できるのか。状況に合わせて選んでください。</p>
+    <p class="sec-lead">入口は、実装PMから。必要に応じて、企画構想や事業設計まで広げていく形が基本です。</p>
     <div class="eng-list">
-      <div class="eng-row fu">
+      <div class="eng-row feat fu">
         <div class="eng-row-num">01</div>
         <div class="eng-row-left">
-          <div class="eng-row-h">月額サポート</div>
-          <div class="eng-row-price">継続支援</div>
+          <div class="eng-badge">Core</div>
+          <div class="eng-row-h">実装PM支援</div>
+          <div class="eng-row-price">Project PM</div>
         </div>
         <div class="eng-row-right">
-          <p class="eng-row-p">複数の案件を並行して見てほしい、定期的に話を聞いてほしい、という方向けです。社内に企画を整理できる人がいない場合や、意思決定の壁打ち相手が欲しい場合に向いています。</p>
-          <div class="eng-row-scope"><span class="eng-scope-label">期間</span>企画段階から運営改善まで継続</div>
+          <p class="eng-row-p">デジタルコンテンツを実空間に導入する案件に入り、制作・施工・施設運営の間をつなぎます。開業・イベント本番・設置完了まで、課題整理と進行管理を担います。</p>
+          <div class="eng-row-scope"><span class="eng-scope-label">向いている状況</span>導入する内容は決まっているが、現場実装と関係者調整に不安がある</div>
         </div>
       </div>
-      <div class="eng-row feat fu">
+      <div class="eng-row fu">
         <div class="eng-row-num">02</div>
         <div class="eng-row-left">
-          <div class="eng-badge">Most selected</div>
-          <div class="eng-row-h">案件サポート</div>
-          <div class="eng-row-price">1案件集中</div>
+          <div class="eng-row-h">実装前レビュー</div>
+          <div class="eng-row-price">Spot Review</div>
         </div>
         <div class="eng-row-right">
-          <p class="eng-row-p">1つの案件に最初から最後まで関わります。新しい施設を立ち上げる、リニューアルする、新しい業態を始めるといった案件に向いています。</p>
-          <div class="eng-row-scope"><span class="eng-scope-label">期間</span>企画整理から形にする、開業まで</div>
+          <p class="eng-row-p">提案書、図面、機材構成、現地条件を確認し、実装上のリスクや不足論点を洗い出します。提案前・発注前・現地調査後の確認に向いています。</p>
+          <div class="eng-row-scope"><span class="eng-scope-label">向いている状況</span>大きな契約や工事に入る前に、破綻しやすい論点を確認したい</div>
         </div>
       </div>
-      <div class="eng-row impl fu">
+      <div class="eng-row upstream fu">
         <div class="eng-row-num">03</div>
         <div class="eng-row-left">
-          <div class="eng-row-h">スポット相談</div>
-          <div class="eng-row-price">¥15万円〜</div>
+          <div class="eng-row-h">企画構想支援</div>
+          <div class="eng-row-price">Upstream</div>
         </div>
         <div class="eng-row-right">
-          <p class="eng-row-p">現地を見てレポートを出す、半日で状況を整理する、提案書を一緒に見直す。まずは一度話を聞いてほしい、という方はここから始めてください。</p>
-          <div class="eng-row-scope"><span class="eng-scope-label">期間</span>時期・段階問わず、単発から</div>
+          <p class="eng-row-p">まだ何を作るかが固まっていない段階から、体験の狙い、来場者行動、収益・運営との接続、実装可能性を整理します。実装を前提にした上流整理です。</p>
+          <div class="eng-row-scope"><span class="eng-scope-label">向いている状況</span>場所やテーマはあるが、体験・事業・実装条件がまだつながっていない</div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
+<section class="scope">
+  <div class="wrap">
+    <div class="eyebrow">Scope</div>
+    <h2 class="sec-title">担うこと / <em>担わないこと</em></h2>
+    <p class="sec-lead">実装PMの価値を曖昧にしないため、責任範囲を分けて考えます。必要に応じて、専門会社とチームを組みます。</p>
+    <div class="scope-table fu">
+      <div class="scope-col">
+        <div class="scope-head">LOCABLEが担うこと</div>
+        <div class="scope-item">体験コンテンツの実装条件整理</div>
+        <div class="scope-item">関係者間の要件整理・論点整理</div>
+        <div class="scope-item">進行管理、課題管理、意思決定支援</div>
+        <div class="scope-item">現地条件・図面・運営条件の確認</div>
+        <div class="scope-item">実装を前提にした企画構想の整理</div>
+      </div>
+      <div class="scope-col">
+        <div class="scope-head no">原則として専門会社と分担すること</div>
+        <div class="scope-item">コンテンツそのものの詳細開発・プログラム制作</div>
+        <div class="scope-item">電気・内装・設備工事の施工責任</div>
+        <div class="scope-item">法定設計・確認申請などの設計者責任</div>
+        <div class="scope-item">機材メーカーとしての保証・保守</div>
+        <div class="scope-item">広告運用や集客施策の実務代行</div>
+      </div>
+    </div>
+    <p class="scope-note">※案件ごとに責任範囲を整理し、必要な専門会社・制作会社・施工会社と連携して進めます。</p>
+  </div>
+</section>
 
-<section class="sector">
+<section class="sector" id="sector">
   <div class="wrap">
     <div class="eyebrow">Sector</div>
     <h2 class="sec-title">得意とする<em>領域</em></h2>
-    <p class="sec-lead">これまでのキャリアを通じて深く関わってきた業態を中心に対応しています。</p>
+    <p class="sec-lead">デジタルコンテンツをリアルな場所に実装し、来場者の体験や行動に変える領域を中心に対応します。</p>
     <div class="sector-list">
       <div class="sector-row fu">
         <div class="sector-n">01</div>
-        <div class="sector-h">家族向け体験施設</div>
-        <div class="sector-p">遊び場・キッズ施設・体験型の商業施設。立ち上げから運営の改善・多店舗展開まで一貫して対応します。</div>
+        <div class="sector-h">体験型施設 / キッズ施設</div>
+        <div class="sector-p">遊び・学び・インタラクションを含む空間。コンテンツ、機材、運営、スタッフ動線まで含めて実装します。</div>
         <div class="sector-tag">Main</div>
       </div>
       <div class="sector-row fu">
         <div class="sector-n">02</div>
-        <div class="sector-h">小売 / 商業施設</div>
-        <div class="sector-p">「売り場」から「また来たくなる場所」への転換。体験・売場・運営がバラバラになっている状態をつなぎます。</div>
+        <div class="sector-h">商業施設 / 小売空間</div>
+        <div class="sector-p">売場や共用部に体験を導入し、回遊・滞在・購買・再来訪につながる状態を整えます。</div>
         <div class="sector-tag">Retail</div>
       </div>
       <div class="sector-row fu">
         <div class="sector-n">03</div>
-        <div class="sector-h">観光 / 宿泊施設</div>
-        <div class="sector-p">その場所でしかできない体験の設計。体験・物販・飲食・周辺への回遊がつながるよう整えます。</div>
-        <div class="sector-tag">Hospitality</div>
+        <div class="sector-h">観光 / 宿泊 / 地域拠点</div>
+        <div class="sector-p">その場所でしかできない体験を、空間条件・運営条件・地域資源と接続して実装します。</div>
+        <div class="sector-tag">Tourism</div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="cta">
+<section class="cta" id="contact">
   <div class="cta-glow"></div>
   <div class="cta-inner">
     <div class="cta-eyebrow">Contact</div>
-    <h2 class="cta-title">まず、<em>話を</em><br>聞かせてください。</h2>
-    <p class="cta-body">「まだ企画の段階」でも、「提案前に一度見てほしい」でも。<br>どの段階からでも、お気軽にご相談ください。</p>
-    <button class="cta-btn">お問い合わせ・ご相談はこちら</button>
+    <h2 class="cta-title">実装で止まりそうな案件を、<br><em>前に進める</em>相談から。</h2>
+    <p class="cta-body">デジタルコンテンツを空間に入れたい。企画はあるが現場で成立するか不安。<br>制作会社・施工会社・施設側の間に入って整理してほしい。そういった段階からご相談ください。</p>
+    <button class="cta-btn" onclick="location.href='mailto:info@locable.co.jp?subject=LOCABLEへの相談&body=相談内容：%0D%0A案件の段階：%0D%0A場所・施設種別：%0D%0A希望する支援：'">お問い合わせ・ご相談はこちら</button>
   </div>
 </section>
 
