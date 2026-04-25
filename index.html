@@ -103,26 +103,26 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .eng-scope-label{font-size:0.6rem;letter-spacing:0.13em;text-transform:uppercase;color:var(--tx-muted);margin-right:0.5rem}
 .eng-row.feat .eng-scope-label{color:var(--tx-on-dark-muted)}
 .eng-row.impl .eng-scope-label{color:rgba(232,92,26,0.55)}
-.scope{padding:5.5rem 4rem;background:var(--cream)}
-.scope-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule);margin-top:2.5rem}
-.scope-col{background:var(--cream)}
-.scope-col-head{padding:1.1rem 2rem}
+
+
+
+
 .scope-col-head.incl{background:var(--navy)}
 .scope-col-head.excl{background:var(--rule)}
-.scope-col-title{font-size:0.85rem;font-weight:500}
-.scope-col-head.incl .scope-col-title{color:var(--tx-on-dark)}
-.scope-col-head.excl .scope-col-title{color:var(--tx-sub)}
-.scope-item{display:flex;align-items:center;gap:1rem;padding:0.9rem 2rem;border-bottom:1px solid var(--rule)}
+
+.scope-col-head.incl 
+.scope-col-head.excl 
+
 .scope-item:last-child{border-bottom:none}
 .scope-item.incl-item{background:var(--white)}
 .scope-item.incl-item:nth-child(even){background:var(--cream)}
 .scope-item.excl-item{background:var(--white);opacity:0.65}
 .scope-item.excl-item:nth-child(even){background:var(--cream)}
-.scope-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0}
+
 .scope-dot.o{background:var(--navy)}
 .scope-dot.x{background:var(--rule)}
-.scope-text{font-size:0.84rem;color:var(--tx-body);font-weight:400}
-.scope-note{margin-top:1.5rem;font-size:0.82rem;color:var(--tx-muted);font-style:italic}
+
+
 .sector{padding:5.5rem 4rem;background:var(--white)}
 .sector-list{margin-top:2.5rem;display:flex;flex-direction:column}
 .sector-row{display:grid;grid-template-columns:3rem 1fr 2.5fr auto;align-items:center;gap:2rem;padding:1.75rem 0;border-bottom:1px solid var(--rule);transition:background 0.2s}
@@ -170,7 +170,7 @@ footer{background:#07101F;padding:2.75rem 4rem;border-top:1px solid rgba(255,255
   .eng-row-left{grid-column:2;padding:1.5rem 1.5rem 0.5rem 0.75rem;border-right:none}
   .eng-row-right{grid-column:2;padding:0.5rem 1.5rem 1.75rem 0.75rem}
   .eng-row-num{padding:1.5rem 0 0 1.25rem;font-size:2rem;grid-row:1 / span 2}
-  .scope-grid{grid-template-columns:1fr}
+  
   .sector-row{grid-template-columns:2.5rem 1fr;gap:1rem}.sector-p,.sector-tag{display:none}
   footer{padding:1.75rem 1.5rem}
   .footer-inner{grid-template-columns:1fr;gap:1.75rem}
@@ -186,7 +186,6 @@ footer{background:#07101F;padding:2.75rem 4rem;border-top:1px solid rgba(255,255
   <div class="nav-links">
     <button class="nav-link">できること</button>
     <button class="nav-link">頼み方</button>
-    <button class="nav-link">支援範囲</button>
     <button class="nav-link">領域</button>
   </div>
   <button class="nav-cta">相談する</button>
@@ -355,41 +354,6 @@ footer{background:#07101F;padding:2.75rem 4rem;border-top:1px solid rgba(255,255
   </div>
 </section>
 
-<section class="scope">
-  <div class="wrap">
-    <div class="eyebrow">Scope</div>
-    <h2 class="sec-title">お引き受けできることと、<em>そうでないこと</em></h2>
-    <p class="sec-lead">何でも屋にならないよう、範囲を明確にしています。まず何ができるかを確認してください。</p>
-    <div class="scope-grid">
-      <div class="scope-col">
-        <div class="scope-col-head incl">
-          <div class="scope-col-title">お引き受けできること</div>
-        </div>
-        <div class="scope-items">
-          <div class="scope-item incl-item"><div class="scope-dot o"></div><div class="scope-text">企画の整理・方向性を決める</div></div>
-          <div class="scope-item incl-item"><div class="scope-dot o"></div><div class="scope-text">現場で動く条件を確認する</div></div>
-          <div class="scope-item incl-item"><div class="scope-dot o"></div><div class="scope-text">設計・進行管理のサポート</div></div>
-          <div class="scope-item incl-item"><div class="scope-dot o"></div><div class="scope-text">提案・商談前後の確認・壁打ち</div></div>
-          <div class="scope-item incl-item"><div class="scope-dot o"></div><div class="scope-text">関係者間の話の整理</div></div>
-          <div class="scope-item incl-item"><div class="scope-dot o"></div><div class="scope-text">レビュー・相談への対応</div></div>
-        </div>
-      </div>
-      <div class="scope-col">
-        <div class="scope-col-head excl">
-          <div class="scope-col-title">別途ご相談が必要なこと</div>
-        </div>
-        <div class="scope-items">
-          <div class="scope-item excl-item"><div class="scope-dot x"></div><div class="scope-text">詳細な設計の実務（別途契約）</div></div>
-          <div class="scope-item excl-item"><div class="scope-dot x"></div><div class="scope-text">制作・工事の実務（別途契約）</div></div>
-          <div class="scope-item excl-item"><div class="scope-dot x"></div><div class="scope-text">事務局として常駐する業務</div></div>
-          <div class="scope-item excl-item"><div class="scope-dot x"></div><div class="scope-text">契約範囲を超えた継続対応</div></div>
-          <div class="scope-item excl-item"><div class="scope-dot x"></div><div class="scope-text">制限なしの会議への参加</div></div>
-        </div>
-      </div>
-    </div>
-    <p class="scope-note">※ 案件の内容や進み具合によって、対応できる範囲は調整できます。まずご相談ください。</p>
-  </div>
-</section>
 
 <section class="sector">
   <div class="wrap">
