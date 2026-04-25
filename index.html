@@ -123,33 +123,37 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .eng-row.feat .eng-row-scope{color:var(--tx-on-dark-muted)}
 .eng-scope-label{font-size:0.6rem;letter-spacing:0.13em;text-transform:uppercase;color:var(--tx-muted);margin-right:0.5rem;font-family:var(--font-en)}
 .eng-row.feat .eng-scope-label{color:var(--tx-on-dark-muted)}
-.scope{padding:5.5rem 4rem;background:var(--cream)}
-.scope-table{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule);margin-top:2.5rem}
-.scope-col{background:var(--white)}
-.scope-head{padding:1rem 1.4rem;font-size:0.72rem;letter-spacing:0.16em;text-transform:uppercase;font-family:var(--font-en);color:#fff;background:var(--navy)}
-.scope-head.no{background:#8B929E}
-.scope-item{padding:1rem 1.4rem;border-bottom:1px solid var(--rule);font-size:0.82rem;line-height:1.85;color:var(--tx-body);font-weight:300}
-.scope-item:last-child{border-bottom:none}
-.scope-note{margin-top:1.4rem;font-size:0.78rem;color:var(--tx-sub);line-height:1.9}
-.sector{padding:5.5rem 4rem;background:var(--white)}
+.sector{padding:5.5rem 4rem;background:var(--cream)}
 .sector-list{margin-top:2.5rem;display:flex;flex-direction:column}
 .sector-row{display:grid;grid-template-columns:3rem 1fr 2.5fr auto;align-items:center;gap:2rem;padding:1.75rem 0;border-bottom:1px solid var(--rule);transition:background 0.2s}
 .sector-row:first-child{border-top:1px solid var(--rule)}
-.sector-row:hover{background:var(--cream);margin:0 -1rem;padding-left:1rem;padding-right:1rem}
+.sector-row:hover{background:var(--cream-dark);margin:0 -1rem;padding-left:1rem;padding-right:1rem}
 .sector-n{font-family:var(--font-en);font-size:1.45rem;color:var(--rule);line-height:1;font-weight:300;letter-spacing:0.08em}
 .sector-h{font-size:0.92rem;font-weight:400;color:var(--tx-primary)}
 .sector-p{font-size:0.82rem;color:var(--tx-body);font-weight:300;line-height:1.85}
 .sector-tag{font-size:0.62rem;letter-spacing:0.13em;color:var(--orange);border:1px solid rgba(242,101,34,0.25);padding:0.22rem 0.7rem;text-transform:uppercase;white-space:nowrap;font-family:var(--font-en)}
-.cta{padding:7rem 4rem;background:var(--navy);text-align:center;position:relative;overflow:hidden}
+
+/* CTA — 2段階設計 */
+.cta{padding:7rem 4rem;background:var(--navy);position:relative;overflow:hidden}
 .cta-glow{position:absolute;bottom:-4rem;left:50%;transform:translateX(-50%);width:600px;height:300px;background:radial-gradient(ellipse,rgba(242,101,34,0.11) 0%,transparent 70%);pointer-events:none}
-.cta-inner{position:relative;z-index:2}
+.cta-inner{position:relative;z-index:2;text-align:center}
 .cta-eyebrow{font-size:0.65rem;letter-spacing:0.26em;color:var(--orange);text-transform:uppercase;margin-bottom:1.5rem;display:flex;align-items:center;justify-content:center;gap:0.75rem;font-family:var(--font-en)}
 .cta-eyebrow::before,.cta-eyebrow::after{content:'';display:block;width:2rem;height:1px;background:var(--orange)}
 .cta-title{font-size:clamp(1.7rem,3.2vw,2.6rem);font-weight:300;color:var(--tx-on-dark);line-height:1.7;margin-bottom:1.25rem}
 .cta-title em{font-style:normal;color:var(--orange);font-weight:400}
 .cta-body{font-size:0.9rem;color:var(--tx-on-dark-sub);margin-bottom:3rem;font-weight:300;line-height:2}
+.cta-actions{display:flex;flex-direction:column;align-items:center;gap:2.5rem}
+.cta-primary{}
 .cta-btn{display:inline-block;background:var(--orange);color:#fff;border:none;padding:1.1rem 3.25rem;font-size:0.88rem;font-weight:400;letter-spacing:0.07em;cursor:pointer;transition:background 0.2s;font-family:var(--font-ja)}
 .cta-btn:hover{background:var(--orange-soft)}
+.cta-divider{display:flex;align-items:center;gap:1.5rem;width:100%;max-width:480px}
+.cta-divider::before,.cta-divider::after{content:'';flex:1;height:1px;background:rgba(255,255,255,0.1)}
+.cta-divider-text{font-size:0.65rem;letter-spacing:0.18em;color:var(--tx-on-dark-muted);text-transform:uppercase;font-family:var(--font-en);white-space:nowrap}
+.cta-secondary{}
+.cta-soft-btn{display:inline-block;background:transparent;color:var(--tx-on-dark-sub);border:1px solid rgba(255,255,255,0.2);padding:0.95rem 2.75rem;font-size:0.84rem;font-weight:300;letter-spacing:0.06em;cursor:pointer;transition:all 0.2s;font-family:var(--font-ja)}
+.cta-soft-btn:hover{border-color:rgba(255,255,255,0.45);color:var(--tx-on-dark)}
+.cta-soft-note{margin-top:0.85rem;font-size:0.72rem;color:var(--tx-on-dark-muted);letter-spacing:0.02em;line-height:1.7}
+
 footer{background:#07101F;padding:2.75rem 4rem;border-top:1px solid rgba(255,255,255,0.06)}
 .footer-rule{max-width:1040px;margin:0 auto 1.75rem;border:none;border-top:1px solid rgba(255,255,255,0.05)}
 .footer-inner{max-width:1040px;margin:0 auto;display:grid;grid-template-columns:auto 1fr auto;align-items:start;gap:3rem}
@@ -168,7 +172,7 @@ footer{background:#07101F;padding:2.75rem 4rem;border-top:1px solid rgba(255,255
   nav{padding:1rem 1.5rem}.nav-links{display:none}
   .hero{padding:7rem 1.5rem 4rem}
   .hero-scroll{left:1.5rem}
-  .context,.what,.why,.howto,.scope,.sector,.cta{padding:4rem 1.5rem}
+  .context,.what,.why,.howto,.sector,.cta{padding:4rem 1.5rem}
   .issue-grid{grid-template-columns:1fr}
   .service-core{grid-template-columns:1fr}
   .what-grid{grid-template-columns:1fr}
@@ -179,12 +183,13 @@ footer{background:#07101F;padding:2.75rem 4rem;border-top:1px solid rgba(255,255
   .eng-row-left{grid-column:2;padding:1.5rem 1.5rem 0.5rem 0.75rem;border-right:none}
   .eng-row-right{grid-column:2;padding:0.5rem 1.5rem 1.75rem 0.75rem}
   .eng-row-num{padding:1.5rem 0 0 1.25rem;font-size:2rem;grid-row:1 / span 2}
-  .scope-table{grid-template-columns:1fr}
   .sector-row{grid-template-columns:2.5rem 1fr;gap:1rem}.sector-p,.sector-tag{display:none}
   footer{padding:1.75rem 1.5rem}
   .footer-inner{grid-template-columns:1fr;gap:1.75rem}
   .footer-right{align-items:flex-start}
   .footer-mid{flex-direction:column;gap:1.25rem}
+  .cta-actions{gap:2rem}
+  .cta-divider{max-width:100%}
 }
 </style>
 </head>
@@ -393,33 +398,6 @@ footer{background:#07101F;padding:2.75rem 4rem;border-top:1px solid rgba(255,255
   </div>
 </section>
 
-<section class="scope">
-  <div class="wrap">
-    <div class="eyebrow">Scope</div>
-    <h2 class="sec-title">担うこと / <em>担わないこと</em></h2>
-    <p class="sec-lead">実装PMの価値を曖昧にしないため、責任範囲を分けて考えます。必要に応じて、専門会社とチームを組みます。</p>
-    <div class="scope-table fu">
-      <div class="scope-col">
-        <div class="scope-head">LOCABLEが担うこと</div>
-        <div class="scope-item">体験コンテンツの実装条件整理</div>
-        <div class="scope-item">関係者間の要件整理・論点整理</div>
-        <div class="scope-item">進行管理、課題管理、意思決定支援</div>
-        <div class="scope-item">現地条件・図面・運営条件の確認</div>
-        <div class="scope-item">実装を前提にした企画構想の整理</div>
-      </div>
-      <div class="scope-col">
-        <div class="scope-head no">原則として専門会社と分担すること</div>
-        <div class="scope-item">コンテンツそのものの詳細開発・プログラム制作</div>
-        <div class="scope-item">電気・内装・設備工事の施工責任</div>
-        <div class="scope-item">法定設計・確認申請などの設計者責任</div>
-        <div class="scope-item">機材メーカーとしての保証・保守</div>
-        <div class="scope-item">広告運用や集客施策の実務代行</div>
-      </div>
-    </div>
-    <p class="scope-note">※案件ごとに責任範囲を整理し、必要な専門会社・制作会社・施工会社と連携して進めます。</p>
-  </div>
-</section>
-
 <section class="sector" id="sector">
   <div class="wrap">
     <div class="eyebrow">Sector</div>
@@ -454,7 +432,18 @@ footer{background:#07101F;padding:2.75rem 4rem;border-top:1px solid rgba(255,255
     <div class="cta-eyebrow">Contact</div>
     <h2 class="cta-title">実装で止まりそうな案件を、<br><em>前に進める</em>相談から。</h2>
     <p class="cta-body">デジタルコンテンツを空間に入れたい。企画はあるが現場で成立するか不安。<br>制作会社・施工会社・施設側の間に入って整理してほしい。そういった段階からご相談ください。</p>
-    <button class="cta-btn" onclick="location.href='mailto:info@locable.co.jp?subject=LOCABLEへの相談&body=相談内容：%0D%0A案件の段階：%0D%0A場所・施設種別：%0D%0A希望する支援：'">お問い合わせ・ご相談はこちら</button>
+    <div class="cta-actions">
+      <div class="cta-primary">
+        <button class="cta-btn" onclick="location.href='mailto:info@locable.co.jp?subject=LOCABLEへの相談&body=相談内容：%0D%0A案件の段階：%0D%0A場所・施設種別：%0D%0A希望する支援：'">プロジェクトを相談する</button>
+      </div>
+      <div class="cta-divider">
+        <span class="cta-divider-text">or</span>
+      </div>
+      <div class="cta-secondary">
+        <button class="cta-soft-btn" onclick="location.href='https://forms.gle/placeholder'">まず話だけ聞いてみる</button>
+        <p class="cta-soft-note">会社名・一言だけで構いません。返信は森山本人から行います。</p>
+      </div>
+    </div>
   </div>
 </section>
 
