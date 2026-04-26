@@ -75,9 +75,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .what .sec-title{color:var(--tx-on-dark)}
 .what .sec-lead{color:var(--tx-on-dark-sub)}
 .service-core{display:grid;grid-template-columns:1.1fr 0.9fr;gap:1px;background:rgba(255,255,255,0.08);margin-top:2.5rem}
-.core-card{background:var(--navy-mid);padding:2.5rem;position:relative;overflow:hidden}
+.core-card{background:var(--navy-mid);padding:2.5rem;position:relative;overflow:hidden;display:flex;flex-direction:column}
 .core-card.main{border-top:3px solid var(--orange)}
 .core-label{display:inline-block;font-size:0.62rem;letter-spacing:0.16em;text-transform:uppercase;color:#fff;background:var(--orange);padding:0.22rem 0.72rem;margin-bottom:1.2rem;font-family:var(--font-en)}
+/* バッジがないカード側に同等の高さを確保するスペーサー */
+.core-label-spacer{display:block;height:calc(0.62rem * 1.4 + 0.22rem * 2 + 1.2rem)}
 .core-kicker{font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--tx-on-dark-muted);margin-bottom:0.75rem;font-family:var(--font-en)}
 .core-title{font-size:1.25rem;font-weight:400;color:var(--tx-on-dark);margin-bottom:0.8rem;line-height:1.55}
 .core-text{font-size:0.86rem;color:var(--tx-on-dark-sub);line-height:2;font-weight:300}
@@ -211,11 +213,13 @@ footer{background:#07101F;padding:2.75rem 4rem;border-top:1px solid rgba(255,255
   <div class="hero-inner">
     <div class="hero-eyebrow">Location Business Producer</div>
     <h1 class="hero-headline">
-      場所を読み解き、<em>価値を実装する</em>
+      場所を読み解き、<br><em>価値を実装する</em>
     </h1>
     <p class="hero-sub">
-      商業施設・観光拠点・地域拠点…　ロケーションビジネスの現場では、構想と場所づくりの間に深い溝があります。<br>
-      LOCABLEは、場所の可能性を読み、事業設計から現場実装まで一貫して推進するプロデューサーです。
+      商業施設・観光拠点・地域拠点…<br>
+      ロケーションビジネスの現場では、構想と場所づくりの間に深い溝があります。<br>
+      LOCABLEは、場所の可能性を読み、<br>
+      事業設計から現場実装まで一貫して推進するプロデューサーです。
     </p>
     <div class="hero-cta-group">
       <button class="btn-fill" onclick="document.querySelector('#contact').scrollIntoView({behavior:'smooth'})">プロジェクトを相談する</button>
@@ -281,6 +285,7 @@ footer{background:#07101F;padding:2.75rem 4rem;border-top:1px solid rgba(255,255
         </ul>
       </div>
       <div class="core-card fu">
+        <span class="core-label-spacer"></span>
         <div class="core-kicker">Extension</div>
         <h3 class="core-title">企画構想・体験設計</h3>
         <p class="core-text">構想の前提が曖昧な場合は、体験の狙い、対象者、導線、収益・運営との接続まで整理します。上流だけを語るのではなく、実現可能性を踏まえた構想に落とし込みます。</p>
@@ -370,19 +375,8 @@ footer{background:#07101F;padding:2.75rem 4rem;border-top:1px solid rgba(255,255
           <div class="eng-row-scope"><span class="eng-scope-label">向いている状況</span>導入する構想はできているが、実現のための推進に不安がある</div>
         </div>
       </div>
-      <div class="eng-row fu">
-        <div class="eng-row-num">02</div>
-        <div class="eng-row-left">
-          <div class="eng-row-h">実装前の伴走</div>
-          <div class="eng-row-price">Spot Review</div>
-        </div>
-        <div class="eng-row-right">
-          <p class="eng-row-p">提案書、図面、機材構成、現地条件を確認し、実装上のリスクや不足論点を洗い出します。提案前・発注前・現地調査後の確認に向いています。</p>
-          <div class="eng-row-scope"><span class="eng-scope-label">向いている状況</span>大きな契約や工事に入る前に、破綻しやすい論点を確認したい</div>
-        </div>
-      </div>
       <div class="eng-row upstream fu">
-        <div class="eng-row-num">03</div>
+        <div class="eng-row-num">02</div>
         <div class="eng-row-left">
           <div class="eng-row-h">継続伴走</div>
           <div class="eng-row-price">Upstream</div>
@@ -390,6 +384,17 @@ footer{background:#07101F;padding:2.75rem 4rem;border-top:1px solid rgba(255,255
         <div class="eng-row-right">
           <p class="eng-row-p">まだ何を作るかが固まっていない段階から、体験の狙い、来場者行動、収益・運営との接続、実装可能性を整理します。実装を前提にした上流整理です。開業後の運用改善まで伴走します。</p>
           <div class="eng-row-scope"><span class="eng-scope-label">向いている状況</span>場所やテーマはあるが、体験・事業・実装条件がまだつながっていない</div>
+        </div>
+      </div>
+      <div class="eng-row fu">
+        <div class="eng-row-num">03</div>
+        <div class="eng-row-left">
+          <div class="eng-row-h">実装前の伴走</div>
+          <div class="eng-row-price">Spot Review</div>
+        </div>
+        <div class="eng-row-right">
+          <p class="eng-row-p">提案書、図面、機材構成、現地条件を確認し、実装上のリスクや不足論点を洗い出します。提案前・発注前・現地調査後の確認に向いています。</p>
+          <div class="eng-row-scope"><span class="eng-scope-label">向いている状況</span>大きな契約や工事に入る前に、破綻しやすい論点を確認したい</div>
         </div>
       </div>
     </div>
