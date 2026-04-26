@@ -132,8 +132,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .sector-h{font-size:0.92rem;font-weight:400;color:var(--tx-primary)}
 .sector-p{font-size:0.82rem;color:var(--tx-body);font-weight:300;line-height:1.85}
 .sector-tag{font-size:0.62rem;letter-spacing:0.13em;color:var(--orange);border:1px solid rgba(242,101,34,0.25);padding:0.22rem 0.7rem;text-transform:uppercase;white-space:nowrap;font-family:var(--font-en)}
-
-/* CTA — 2段階設計 */
 .cta{padding:7rem 4rem;background:var(--navy);position:relative;overflow:hidden}
 .cta-glow{position:absolute;bottom:-4rem;left:50%;transform:translateX(-50%);width:600px;height:300px;background:radial-gradient(ellipse,rgba(242,101,34,0.11) 0%,transparent 70%);pointer-events:none}
 .cta-inner{position:relative;z-index:2;text-align:center}
@@ -153,7 +151,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .cta-soft-btn{display:inline-block;background:transparent;color:var(--tx-on-dark-sub);border:1px solid rgba(255,255,255,0.2);padding:0.95rem 2.75rem;font-size:0.84rem;font-weight:300;letter-spacing:0.06em;cursor:pointer;transition:all 0.2s;font-family:var(--font-ja)}
 .cta-soft-btn:hover{border-color:rgba(255,255,255,0.45);color:var(--tx-on-dark)}
 .cta-soft-note{margin-top:0.85rem;font-size:0.72rem;color:var(--tx-on-dark-muted);letter-spacing:0.02em;line-height:1.7}
-
 footer{background:#07101F;padding:2.75rem 4rem;border-top:1px solid rgba(255,255,255,0.06)}
 .footer-rule{max-width:1040px;margin:0 auto 1.75rem;border:none;border-top:1px solid rgba(255,255,255,0.05)}
 .footer-inner{max-width:1040px;margin:0 auto;display:grid;grid-template-columns:auto 1fr auto;align-items:start;gap:3rem}
@@ -214,17 +211,17 @@ footer{background:#07101F;padding:2.75rem 4rem;border-top:1px solid rgba(255,255
   <div class="hero-inner">
     <div class="hero-eyebrow">Location Business Producer</div>
     <h1 class="hero-headline">
-      場所に、<em>事業の文脈と<br>実装の力</em>を持ち込む。
+      場所を読み解き、<em>価値を実装する</em>
     </h1>
     <p class="hero-sub">
-      施設・商業・観光・地域。ロケーションビジネスの現場では、構想と実装の間に深い溝があります。<br>
+      商業施設・観光拠点・地域拠点…　ロケーションビジネスの現場では、構想と場所づくりの間に深い溝があります。<br>
       LOCABLEは、場所の可能性を読み、事業設計から現場実装まで一貫して推進するプロデューサーです。
     </p>
     <div class="hero-cta-group">
       <button class="btn-fill" onclick="document.querySelector('#contact').scrollIntoView({behavior:'smooth'})">プロジェクトを相談する</button>
       <button class="btn-ghost" onclick="document.querySelector('#service').scrollIntoView({behavior:'smooth'})">できることを見る</button>
     </div>
-    <p class="hero-note">構想段階から、現場への導入・開業後の運営まで、必要な場所から入ります。</p>
+    <p class="hero-note">開発・設計という実装段階だけでなく、上流の構想段階から運用までお手伝いします。</p>
   </div>
   <div class="hero-scroll"><div class="scroll-bar"></div>scroll</div>
 </section>
@@ -233,7 +230,7 @@ footer{background:#07101F;padding:2.75rem 4rem;border-top:1px solid rgba(255,255
   <div class="wrap">
     <div class="eyebrow">Context</div>
     <h2 class="sec-title">こんな時に、<em>LOCABLEが入ります</em></h2>
-    <p class="sec-lead">作ったはいいが、現場でうまく動かない。関係者の話がかみ合わない。そういった状況で、声をかけていただくことが多いです。</p>
+    <p class="sec-lead">作るとなると関係者が多くて調整が大変。長期的な運用を見据えて作れていない。考えていることを各専門チームへうまく伝えられない。そういった状況で、私たちが入ります。</p>
     <div class="issue-grid">
       <div class="issue-card fu">
         <div class="issue-num">01</div>
@@ -241,15 +238,15 @@ footer{background:#07101F;padding:2.75rem 4rem;border-top:1px solid rgba(255,255
       </div>
       <div class="issue-card fu">
         <div class="issue-num">02</div>
-        <div class="issue-text">制作会社・施工会社・施設側、それぞれに聞いても話がかみ合わず、判断できない</div>
+        <div class="issue-text">制作会社・施工会社・施設側、それぞれに聞いても話が理解できず、判断できない</div>
       </div>
       <div class="issue-card fu">
         <div class="issue-num">03</div>
-        <div class="issue-text">企画は面白いと思っているが、本当に現場で成立するか確認できていない</div>
+        <div class="issue-text">企画は面白いと思っているが、本当に現場で成立するか、運用に耐えられるかが確認できていない</div>
       </div>
       <div class="issue-card fu">
         <div class="issue-num">04</div>
-        <div class="issue-text">機材・配線・什器・施工の調整を、誰がどこまでやるか決まっていない</div>
+        <div class="issue-text">コンテンツ開発者と、機材や施工関係者の間の調整ができない</div>
       </div>
       <div class="issue-card fu">
         <div class="issue-num">05</div>
@@ -267,14 +264,14 @@ footer{background:#07101F;padding:2.75rem 4rem;border-top:1px solid rgba(255,255
   <div class="what-accent"></div>
   <div class="wrap">
     <div class="eyebrow">What we do</div>
-    <h2 class="sec-title">主力は、<em>実装とPM</em>。<br>必要に応じて、企画構想までさかのぼります。</h2>
+    <h2 class="sec-title">主力は、<em>構想の実現とプロジェクトマネジメント</em>。<br>必要に応じて、企画構想までさかのぼります。</h2>
     <p class="sec-lead">LOCABLEは、企画する側と、制作・施工・設備の専門家たちの間に入る翻訳者であり、推進役です。それぞれの言葉と判断基準をそろえながら、現場で動く状態まで整えます。</p>
 
     <div class="service-core">
       <div class="core-card main fu">
         <div class="core-label">Core Service</div>
         <div class="core-kicker">Implementation / PM</div>
-        <h3 class="core-title">デジタルコンテンツ実装・開業PM</h3>
+        <h3 class="core-title">デジタルコンテンツ導入・進行管理</h3>
         <p class="core-text">体験コンテンツを空間に実装するために、機材条件、施工条件、運営条件、関係者の役割分担を整理し、開業・本番までの推進を担います。</p>
         <ul class="core-list">
           <li>機材・什器・配線・設置条件の整理</li>
@@ -286,7 +283,7 @@ footer{background:#07101F;padding:2.75rem 4rem;border-top:1px solid rgba(255,255
       <div class="core-card fu">
         <div class="core-kicker">Extension</div>
         <h3 class="core-title">企画構想・体験設計</h3>
-        <p class="core-text">実装の前提が曖昧な場合は、体験の狙い、対象者、導線、収益・運営との接続まで整理します。上流だけを語るのではなく、実装可能性を踏まえた構想に落とし込みます。</p>
+        <p class="core-text">構想の前提が曖昧な場合は、体験の狙い、対象者、導線、収益・運営との接続まで整理します。上流だけを語るのではなく、実現可能性を踏まえた構想に落とし込みます。</p>
         <ul class="core-list">
           <li>体験コンセプトの整理</li>
           <li>成立条件と制約条件の可視化</li>
@@ -299,7 +296,7 @@ footer{background:#07101F;padding:2.75rem 4rem;border-top:1px solid rgba(255,255
     <div class="what-grid">
       <div class="what-item fu">
         <div class="what-item-title">実装条件の整理</div>
-        <div class="what-item-desc">プロジェクター、センサー、PC、音響、照明、配線、什器、施工の条件を現場目線で整理します。</div>
+        <div class="what-item-desc">機材や施工の条件を現場目線・ユーザー目線で整理します。</div>
       </div>
       <div class="what-item fu">
         <div class="what-item-title">関係者間の翻訳</div>
@@ -328,23 +325,23 @@ footer{background:#07101F;padding:2.75rem 4rem;border-top:1px solid rgba(255,255
 <section class="why">
   <div class="wrap">
     <div class="eyebrow">Why it works</div>
-    <h2 class="sec-title">強みは、<br><em>デジタルと空間の間で起きるズレを、現場で潰せること</em>です。</h2>
+    <h2 class="sec-title">強みは、<br><em>体験×空間を事業目線まで遡って実現できること</em>です。</h2>
     <div class="why-flow">
       <div class="why-step fu">
         <div class="why-step-num">01</div>
         <div class="why-step-title">空間条件が分かる</div>
-        <div class="why-step-desc">建築・内装・設備・導線・安全性を踏まえて、コンテンツが成立する条件を読める。</div>
+        <div class="why-step-desc">空間設計の専門知に裏付けられた視点で、コンテンツが成立する条件を読める。</div>
       </div>
       <div class="why-arrow fu">→</div>
       <div class="why-step fu">
         <div class="why-step-num">02</div>
         <div class="why-step-title">デジタル実装が分かる</div>
-        <div class="why-step-desc">映像・センサー・インタラクション・機材構成を、現場運用に接続して考えられる。</div>
+        <div class="why-step-desc">映像・センサー・インタラクション・機材構成を、制作会社・ハードウェア・施工の各視点に接続して考えられる。</div>
       </div>
       <div class="why-arrow fu">→</div>
       <div class="why-step fu">
         <div class="why-step-num">03</div>
-        <div class="why-step-title">PMとして前に進める</div>
+        <div class="why-step-title">推進者として前に進める</div>
         <div class="why-step-desc">誰が何を決めるかを明確にし、制作・施工・運営の間で止まる論点を動かせる。</div>
       </div>
     </div>
@@ -358,7 +355,7 @@ footer{background:#07101F;padding:2.75rem 4rem;border-top:1px solid rgba(255,255
 <section class="howto" id="start">
   <div class="wrap">
     <div class="eyebrow">How to start</div>
-    <h2 class="sec-title">3つの<em>頼み方</em></h2>
+    <h2 class="sec-title"><em>LOCABLEの関わり方</em></h2>
     <p class="sec-lead">まずは現場の整理と進行管理から。必要に応じて、企画や事業設計まで広げていく形が基本です。</p>
     <div class="eng-list">
       <div class="eng-row feat fu">
@@ -369,14 +366,14 @@ footer{background:#07101F;padding:2.75rem 4rem;border-top:1px solid rgba(255,255
           <div class="eng-row-price">Project PM</div>
         </div>
         <div class="eng-row-right">
-          <p class="eng-row-p">デジタルコンテンツを実空間に導入する案件に入り、制作・施工・施設運営の間をつなぎます。開業・イベント本番・設置完了まで、課題整理と進行管理を担います。</p>
-          <div class="eng-row-scope"><span class="eng-scope-label">向いている状況</span>導入する内容は決まっているが、現場実装と関係者調整に不安がある</div>
+          <p class="eng-row-p">体験を実空間に導入する案件に入り、制作・空間設計を担当しながら各専門家をつなぎます。開業・イベント本番・設置完了まで、課題整理と進行管理を担います。</p>
+          <div class="eng-row-scope"><span class="eng-scope-label">向いている状況</span>導入する構想はできているが、実現のための推進に不安がある</div>
         </div>
       </div>
       <div class="eng-row fu">
         <div class="eng-row-num">02</div>
         <div class="eng-row-left">
-          <div class="eng-row-h">実装前レビュー</div>
+          <div class="eng-row-h">実装前の伴走</div>
           <div class="eng-row-price">Spot Review</div>
         </div>
         <div class="eng-row-right">
@@ -387,11 +384,11 @@ footer{background:#07101F;padding:2.75rem 4rem;border-top:1px solid rgba(255,255
       <div class="eng-row upstream fu">
         <div class="eng-row-num">03</div>
         <div class="eng-row-left">
-          <div class="eng-row-h">企画構想支援</div>
+          <div class="eng-row-h">継続伴走</div>
           <div class="eng-row-price">Upstream</div>
         </div>
         <div class="eng-row-right">
-          <p class="eng-row-p">まだ何を作るかが固まっていない段階から、体験の狙い、来場者行動、収益・運営との接続、実装可能性を整理します。実装を前提にした上流整理です。</p>
+          <p class="eng-row-p">まだ何を作るかが固まっていない段階から、体験の狙い、来場者行動、収益・運営との接続、実装可能性を整理します。実装を前提にした上流整理です。開業後の運用改善まで伴走します。</p>
           <div class="eng-row-scope"><span class="eng-scope-label">向いている状況</span>場所やテーマはあるが、体験・事業・実装条件がまだつながっていない</div>
         </div>
       </div>
@@ -403,7 +400,7 @@ footer{background:#07101F;padding:2.75rem 4rem;border-top:1px solid rgba(255,255
   <div class="wrap">
     <div class="eyebrow">Sector</div>
     <h2 class="sec-title">得意とする<em>領域</em></h2>
-    <p class="sec-lead">デジタルコンテンツをリアルな場所に実装し、来場者の体験や行動に変える領域を中心に対応します。</p>
+    <p class="sec-lead">デジタルコンテンツをリアルな場所に実装し、来場者の体験や行動を変える領域を中心に対応します。</p>
     <div class="sector-list">
       <div class="sector-row fu">
         <div class="sector-n">01</div>
@@ -461,7 +458,7 @@ footer{background:#07101F;padding:2.75rem 4rem;border-top:1px solid rgba(255,255
       </div>
       <div>
         <span class="footer-col-label">Address</span>
-        <div class="footer-col-val">埼玉県さいたま市大宮区<br>桜木町1-398-1　アドグレイス大宮7</div>
+        <div class="footer-col-val">埼玉県さいたま市大宮区<br>桜木町1-398-1　アドグレイス大宮7F</div>
       </div>
       <div>
         <span class="footer-col-label">Contact</span>
