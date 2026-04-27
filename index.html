@@ -3,8 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LOCABLE</title>
+<title>LOCABLE | Location Business Produce</title>
 <link rel="icon" type="image/svg+xml" href="assets/images/logo-navy.svg">
+<!-- SEO基本 -->
+<meta name="description" content="商業施設・観光拠点・体験型施設のデジタルコンテンツ導入を、構想から現場実装まで推進するプロデューサー。LOCABLEは場所の可能性を読み、事業設計から実装まで一貫して支援します。">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://lp.locable.co.jp/">
+<!-- OGP -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="LOCABLE | Location Business Produce">
+<meta property="og:description" content="商業施設・観光拠点・体験型施設のデジタルコンテンツ導入を、構想から現場実装まで推進するプロデューサー。">
+<meta property="og:url" content="https://lp.locable.co.jp/">
+<meta property="og:site_name" content="LOCABLE">
+<meta property="og:locale" content="ja_JP">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="LOCABLE | Location Business Produce">
+<meta name="twitter:description" content="商業施設・観光拠点・体験型施設のデジタルコンテンツ導入を、構想から現場実装まで推進するプロデューサー。">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&family=Source+Sans+Pro:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -491,7 +506,7 @@ document.getElementById('contactForm').addEventListener('submit',async(e)=>{
     const json=await res.json();
     if(json.success){
       status.style.color='#9ECBFF';
-      status.textContent='お問い合わせを受け付けました。ご連絡をお待ちください。';
+      status.textContent='お問い合わせを受け付けました。担当者より折り返しご連絡いたします。';
       e.target.reset();
     }else{
       status.style.color='#F97583';
@@ -506,6 +521,23 @@ document.getElementById('contactForm').addEventListener('submit',async(e)=>{
     btn.textContent='送信する';
   }
 });
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "LOCABLE（株式会社ロケブル）",
+  "url": "https://lp.locable.co.jp/",
+  "email": "info@locable.co.jp",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "さいたま市大宮区",
+    "addressRegion": "埼玉県",
+    "addressCountry": "JP"
+  },
+  "description": "商業施設・観光拠点・体験型施設のデジタルコンテンツ導入プロデューサー"
+}
 </script>
 </body>
 </html>
