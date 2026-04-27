@@ -78,7 +78,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .core-card{background:var(--navy-mid);padding:2.5rem;position:relative;overflow:hidden;display:flex;flex-direction:column}
 .core-card.main{border-top:3px solid var(--orange)}
 .core-label{display:inline-block;font-size:0.62rem;letter-spacing:0.16em;text-transform:uppercase;color:#fff;background:var(--orange);padding:0.22rem 0.72rem;margin-bottom:1.2rem;font-family:var(--font-en)}
-/* バッジがないカード側に同等の高さを確保するスペーサー */
 .core-label-spacer{display:block;height:calc(0.62rem * 1.4 + 0.22rem * 2 + 1.2rem)}
 .core-kicker{font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--tx-on-dark-muted);margin-bottom:0.75rem;font-family:var(--font-en)}
 .core-title{font-size:1.25rem;font-weight:400;color:var(--tx-on-dark);margin-bottom:0.8rem;line-height:1.55}
@@ -142,17 +141,12 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .cta-title{font-size:clamp(1.7rem,3.2vw,2.6rem);font-weight:300;color:var(--tx-on-dark);line-height:1.7;margin-bottom:1.25rem}
 .cta-title em{font-style:normal;color:var(--orange);font-weight:400}
 .cta-body{font-size:0.9rem;color:var(--tx-on-dark-sub);margin-bottom:3rem;font-weight:300;line-height:2}
-.cta-actions{display:flex;flex-direction:column;align-items:center;gap:2.5rem}
-.cta-primary{}
+.cta-form-field{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.15);color:#fff;padding:0.85rem 1rem;font-size:0.86rem;font-family:var(--font-ja);font-weight:300;outline:none;transition:border-color 0.2s;width:100%}
+.cta-form-field::placeholder{color:rgba(255,255,255,0.3)}
+.cta-form-field:focus{border-color:rgba(242,101,34,0.6)}
 .cta-btn{display:inline-block;background:var(--orange);color:#fff;border:none;padding:1.1rem 3.25rem;font-size:0.88rem;font-weight:400;letter-spacing:0.07em;cursor:pointer;transition:background 0.2s;font-family:var(--font-ja)}
-.cta-btn:hover{background:var(--orange-soft)}
-.cta-divider{display:flex;align-items:center;gap:1.5rem;width:100%;max-width:480px}
-.cta-divider::before,.cta-divider::after{content:'';flex:1;height:1px;background:rgba(255,255,255,0.1)}
-.cta-divider-text{font-size:0.65rem;letter-spacing:0.18em;color:var(--tx-on-dark-muted);text-transform:uppercase;font-family:var(--font-en);white-space:nowrap}
-.cta-secondary{}
-.cta-soft-btn{display:inline-block;background:transparent;color:var(--tx-on-dark-sub);border:1px solid rgba(255,255,255,0.2);padding:0.95rem 2.75rem;font-size:0.84rem;font-weight:300;letter-spacing:0.06em;cursor:pointer;transition:all 0.2s;font-family:var(--font-ja)}
-.cta-soft-btn:hover{border-color:rgba(255,255,255,0.45);color:var(--tx-on-dark)}
-.cta-soft-note{margin-top:0.85rem;font-size:0.72rem;color:var(--tx-on-dark-muted);letter-spacing:0.02em;line-height:1.7}
+.cta-btn:hover:not(:disabled){background:var(--orange-soft)}
+.cta-btn:disabled{opacity:0.6;cursor:not-allowed}
 footer{background:#07101F;padding:2.75rem 4rem;border-top:1px solid rgba(255,255,255,0.06)}
 .footer-rule{max-width:1040px;margin:0 auto 1.75rem;border:none;border-top:1px solid rgba(255,255,255,0.05)}
 .footer-inner{max-width:1040px;margin:0 auto;display:grid;grid-template-columns:auto 1fr auto;align-items:start;gap:3rem}
@@ -187,8 +181,6 @@ footer{background:#07101F;padding:2.75rem 4rem;border-top:1px solid rgba(255,255
   .footer-inner{grid-template-columns:1fr;gap:1.75rem}
   .footer-right{align-items:flex-start}
   .footer-mid{flex-direction:column;gap:1.25rem}
-  .cta-actions{gap:2rem}
-  .cta-divider{max-width:100%}
 }
 </style>
 </head>
@@ -435,18 +427,19 @@ footer{background:#07101F;padding:2.75rem 4rem;border-top:1px solid rgba(255,255
     <div class="cta-eyebrow">Contact</div>
     <h2 class="cta-title">実装で止まりそうな案件を、<br><em>前に進める</em>相談から。</h2>
     <p class="cta-body">デジタルコンテンツを空間に入れたい。企画はあるが現場で成立するか不安。<br>制作会社・施工会社・施設側の間に入って整理してほしい。そういった段階からご相談ください。</p>
-    <div class="cta-actions">
-      <div class="cta-primary">
-        <button class="cta-btn" onclick="location.href='mailto:info@locable.co.jp?subject=LOCABLEへの相談&body=相談内容：%0D%0A案件の段階：%0D%0A場所・施設種別：%0D%0A希望する支援：'">プロジェクトを相談する</button>
-      </div>
-      <div class="cta-divider">
-        <span class="cta-divider-text">or</span>
-      </div>
-      <div class="cta-secondary">
-        <button class="cta-soft-btn" onclick="location.href='https://forms.gle/placeholder'">まず話だけ聞いてみる</button>
-        <p class="cta-soft-note">会社名・一言だけで構いません。返信は森山本人から行います。</p>
-      </div>
-    </div>
+
+    <form id="contactForm" style="width:100%;max-width:480px;margin:0 auto;display:flex;flex-direction:column;gap:0.85rem;text-align:left">
+      <input type="text" name="name" placeholder="お名前 *" required class="cta-form-field">
+      <input type="text" name="company" placeholder="会社名・組織名" class="cta-form-field">
+      <input type="email" name="email" placeholder="メールアドレス *" required class="cta-form-field">
+      <textarea name="message" placeholder="相談内容・案件の段階など *" required rows="5" class="cta-form-field" style="resize:vertical"></textarea>
+      <!-- honeypot -->
+      <input type="text" name="_hp" style="display:none" tabindex="-1" autocomplete="off">
+      <button type="submit" id="submitBtn" class="cta-btn" style="width:100%;margin-top:0.4rem">送信する</button>
+      <p id="formStatus" style="font-size:0.78rem;line-height:1.75;min-height:1.2em;color:var(--tx-on-dark-sub);text-align:center;margin:0"></p>
+    </form>
+
+    <p style="margin-top:1.5rem;font-size:0.72rem;color:var(--tx-on-dark-muted);line-height:1.7">会社名・一言だけで構いません。返信は森山本人から行います。</p>
   </div>
 </section>
 
@@ -482,6 +475,36 @@ const obs=new IntersectionObserver(entries=>{
   entries.forEach(e=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('on'),60);obs.unobserve(e.target)}});
 },{threshold:0.08});
 document.querySelectorAll('.fu').forEach(el=>obs.observe(el));
+
+document.getElementById('contactForm').addEventListener('submit',async(e)=>{
+  e.preventDefault();
+  const btn=document.getElementById('submitBtn');
+  const status=document.getElementById('formStatus');
+  btn.disabled=true;
+  btn.textContent='送信中...';
+  status.textContent='';
+  status.style.color='var(--tx-on-dark-sub)';
+  const data=Object.fromEntries(new FormData(e.target));
+  try{
+    const res=await fetch('/api/contact',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});
+    const json=await res.json();
+    if(json.success){
+      status.style.color='#9ECBFF';
+      status.textContent='お問い合わせを受け付けました。担当者より折り返しご連絡いたします。';
+      e.target.reset();
+    }else{
+      status.style.color='#F97583';
+      status.textContent=json.error||'送信に失敗しました。';
+      btn.disabled=false;
+      btn.textContent='送信する';
+    }
+  }catch{
+    status.style.color='#F97583';
+    status.textContent='通信エラーが発生しました。時間をおいて再度お試しください。';
+    btn.disabled=false;
+    btn.textContent='送信する';
+  }
+});
 </script>
 </body>
 </html>
