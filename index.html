@@ -491,7 +491,7 @@ document.getElementById('contactForm').addEventListener('submit',async(e)=>{
     const json=await res.json();
     if(json.success){
       status.style.color='#9ECBFF';
-      status.textContent='お問い合わせを受け付けました。担当者より折り返しご連絡いたします。';
+      status.textContent='お問い合わせを受け付けました。ご連絡をお待ちください。';
       e.target.reset();
     }else{
       status.style.color='#F97583';
