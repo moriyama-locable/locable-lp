@@ -1,6 +1,5 @@
 export async function onRequestPost(context) {
   const { request, env } = context;
-
   try {
     const { name, email, company, message, _hp } = await request.json();
 
@@ -20,8 +19,8 @@ export async function onRequestPost(context) {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        from: 'no-reply@locable-inc.com',
-        to:   'info@locable-inc.com',
+        from: 'no-reply@locable.co.jp',
+        to:   'info@locable.co.jp',
         reply_to: email,
         subject: `【LP問い合わせ】${name}様 / ${company || '会社名未記入'}`,
         html: `
@@ -43,6 +42,7 @@ export async function onRequestPost(context) {
     return Response.json({ success: true });
 
   } catch (e) {
+    console.error('Unexpected error:', e);
     return Response.json({ error: 'サーバーエラー' }, { status: 500 });
   }
 }
