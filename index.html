@@ -6,20 +6,20 @@
 <title>LOCABLE</title>
 <link rel="icon" type="image/svg+xml" href="assets/images/logo-navy.svg">
 <!-- SEO基本 -->
-<meta name="description" content="商業施設・観光拠点・体験型施設のデジタルコンテンツ導入を、構想から現場実装まで推進するプロデューサー。LOCABLEは場所の可能性を読み、事業設計から実装まで一貫して支援します。">
+<meta name="description" content="商業施設・観光拠点・地域拠点のロケーションビジネスを、構想から現場実装まで推進するプロデューサー。LOCABLEは場所の可能性を読み、事業設計から実装まで一貫して支援します。">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://lp.locable.co.jp/">
 <!-- OGP -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="LOCABLE | Location Business Produce">
-<meta property="og:description" content="商業施設・観光拠点・体験型施設のデジタルコンテンツ導入を、構想から現場実装まで推進するプロデューサー。">
+<meta property="og:description" content="商業施設・観光拠点・地域拠点のロケーションビジネスを、構想から現場実装まで推進するプロデューサー。">
 <meta property="og:url" content="https://lp.locable.co.jp/">
 <meta property="og:site_name" content="LOCABLE">
 <meta property="og:locale" content="ja_JP">
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LOCABLE | Location Business Produce">
-<meta name="twitter:description" content="商業施設・観光拠点・体験型施設のデジタルコンテンツ導入を、構想から現場実装まで推進するプロデューサー。">
+<meta name="twitter:description" content="商業施設・観光拠点・地域拠点のロケーションビジネスを、構想から現場実装まで推進するプロデューサー。">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&family=Source+Sans+Pro:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -145,10 +145,33 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .sector-row{display:grid;grid-template-columns:3rem 1fr 2.5fr auto;align-items:center;gap:2rem;padding:1.75rem 0;border-bottom:1px solid var(--rule);transition:background 0.2s}
 .sector-row:first-child{border-top:1px solid var(--rule)}
 .sector-row:hover{background:var(--cream-dark);margin:0 -1rem;padding-left:1rem;padding-right:1rem}
+.sector-row.sector-sub{opacity:0.5}
+.sector-row.sector-sub .sector-n{color:var(--tx-muted)}
+.sector-row.sector-sub .sector-h{color:var(--tx-sub);font-weight:300}
 .sector-n{font-family:var(--font-en);font-size:1.45rem;color:var(--rule);line-height:1;font-weight:300;letter-spacing:0.08em}
 .sector-h{font-size:0.92rem;font-weight:400;color:var(--tx-primary)}
 .sector-p{font-size:0.82rem;color:var(--tx-body);font-weight:300;line-height:1.85}
 .sector-tag{font-size:0.62rem;letter-spacing:0.13em;color:var(--orange);border:1px solid rgba(242,101,34,0.25);padding:0.22rem 0.7rem;text-transform:uppercase;white-space:nowrap;font-family:var(--font-en)}
+.sector-tag.sub{color:var(--tx-muted);border-color:var(--rule)}
+
+/* Profile section */
+.profile{padding:5.5rem 4rem;background:var(--navy);position:relative;overflow:hidden}
+.profile-accent{position:absolute;bottom:0;left:0;width:40%;height:100%;background:linear-gradient(45deg,rgba(242,101,34,0.04),transparent 60%);pointer-events:none}
+.profile .eyebrow::before{background:var(--orange)}
+.profile-inner{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1.6fr;gap:5rem;align-items:start;margin-top:2.5rem}
+.profile-left{}
+.profile-name{font-family:var(--font-en);font-size:1.5rem;font-weight:300;color:var(--tx-on-dark);letter-spacing:0.04em;line-height:1.3;margin-bottom:0.3rem}
+.profile-title{font-size:0.72rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--tx-on-dark-muted);font-family:var(--font-en);margin-bottom:2rem}
+.profile-rule{width:2rem;height:1px;background:var(--orange);margin-bottom:2rem}
+.profile-meta{display:flex;flex-direction:column;gap:1rem}
+.profile-meta-item{}
+.profile-meta-label{font-size:0.6rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--tx-on-dark-muted);font-family:var(--font-en);margin-bottom:0.25rem;display:block}
+.profile-meta-val{font-size:0.78rem;color:var(--tx-on-dark-sub);font-weight:300;line-height:1.7}
+.profile-right{}
+.profile-body{font-size:0.9rem;color:var(--tx-on-dark-sub);line-height:2.15;font-weight:300;margin-bottom:2.5rem}
+.profile-statement{border-left:2px solid var(--orange);padding-left:1.75rem}
+.profile-statement-text{font-size:1.12rem;font-weight:300;color:var(--tx-on-dark);line-height:1.85;letter-spacing:0.02em}
+
 .cta{padding:7rem 4rem;background:var(--navy);position:relative;overflow:hidden}
 .cta-glow{position:absolute;bottom:-4rem;left:50%;transform:translateX(-50%);width:600px;height:300px;background:radial-gradient(ellipse,rgba(242,101,34,0.11) 0%,transparent 70%);pointer-events:none}
 .cta-inner{position:relative;z-index:2;text-align:center}
@@ -181,7 +204,7 @@ footer{background:#07101F;padding:2.75rem 4rem;border-top:1px solid rgba(255,255
   nav{padding:1rem 1.5rem}.nav-links{display:none}
   .hero{padding:7rem 1.5rem 4rem}
   .hero-scroll{left:1.5rem}
-  .context,.what,.why,.howto,.sector,.cta{padding:4rem 1.5rem}
+  .context,.what,.why,.howto,.sector,.profile,.cta{padding:4rem 1.5rem}
   .issue-grid{grid-template-columns:1fr}
   .service-core{grid-template-columns:1fr}
   .what-grid{grid-template-columns:1fr}
@@ -193,6 +216,7 @@ footer{background:#07101F;padding:2.75rem 4rem;border-top:1px solid rgba(255,255
   .eng-row-right{grid-column:2;padding:0.5rem 1.5rem 1.75rem 0.75rem}
   .eng-row-num{padding:1.5rem 0 0 1.25rem;font-size:2rem;grid-row:1 / span 2}
   .sector-row{grid-template-columns:2.5rem 1fr;gap:1rem}.sector-p,.sector-tag{display:none}
+  .profile-inner{grid-template-columns:1fr;gap:2.5rem}
   footer{padding:1.75rem 1.5rem}
   .footer-inner{grid-template-columns:1fr;gap:1.75rem}
   .footer-right{align-items:flex-start}
@@ -413,25 +437,60 @@ footer{background:#07101F;padding:2.75rem 4rem;border-top:1px solid rgba(255,255
   <div class="wrap">
     <div class="eyebrow">Sector</div>
     <h2 class="sec-title">得意とする<em>領域</em></h2>
-    <p class="sec-lead">デジタルコンテンツをリアルな場所に実装し、来場者の体験や行動を変える領域を中心に対応します。</p>
+    <p class="sec-lead">場所の事業価値を高め、来場者の体験と行動を変える領域を中心に対応します。</p>
     <div class="sector-list">
       <div class="sector-row fu">
         <div class="sector-n">01</div>
-        <div class="sector-h">体験型施設 / キッズ施設</div>
-        <div class="sector-p">遊び・学び・インタラクションを含む空間。コンテンツ、機材、運営、スタッフ動線まで含めて実装します。</div>
-        <div class="sector-tag">Main</div>
-      </div>
-      <div class="sector-row fu">
-        <div class="sector-n">02</div>
         <div class="sector-h">商業施設 / 小売空間</div>
         <div class="sector-p">売場や共用部に体験を導入し、回遊・滞在・購買・再来訪につながる状態を整えます。</div>
         <div class="sector-tag">Retail</div>
       </div>
       <div class="sector-row fu">
-        <div class="sector-n">03</div>
+        <div class="sector-n">02</div>
         <div class="sector-h">観光 / 宿泊 / 地域拠点</div>
         <div class="sector-p">その場所でしかできない体験を、空間条件・運営条件・地域資源と接続して実装します。</div>
         <div class="sector-tag">Tourism</div>
+      </div>
+      <div class="sector-row sector-sub fu">
+        <div class="sector-n">—</div>
+        <div class="sector-h">体験型施設 / キッズ施設</div>
+        <div class="sector-p">遊び・学び・インタラクションを含む空間。コンテンツ、機材、運営、スタッフ動線まで含めて実装します。</div>
+        <div class="sector-tag sub">Sub</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Profile section: Contactセクション直前 -->
+<section class="profile">
+  <div class="profile-accent"></div>
+  <div class="wrap">
+    <div class="eyebrow fu">About</div>
+    <div class="profile-inner">
+      <div class="profile-left fu">
+        <div class="profile-name">Tetsuya Moriyama</div>
+        <div class="profile-title">Representative / LOCABLE Inc.</div>
+        <div class="profile-rule"></div>
+        <div class="profile-meta">
+          <div class="profile-meta-item">
+            <span class="profile-meta-label">Qualification</span>
+            <div class="profile-meta-val">一級建築士<br>ロケーションビジネスプロデューサー</div>
+          </div>
+          <div class="profile-meta-item">
+            <span class="profile-meta-label">Background</span>
+            <div class="profile-meta-val">建築設計 / 空間開発<br>事業立ち上げ / 部門マネジメント</div>
+          </div>
+          <div class="profile-meta-item">
+            <span class="profile-meta-label">Projects</span>
+            <div class="profile-meta-val">30拠点以上の空間プロジェクトに関与</div>
+          </div>
+        </div>
+      </div>
+      <div class="profile-right fu">
+        <p class="profile-body">建築設計を出発点に、医療・教育・文化施設の設計、商業施設内の体験空間開発、店舗開発、事業立ち上げ、部門マネジメントを経験。30拠点以上の空間プロジェクトに携わり、企画構想から設計、開業PM、収支計画、運用改善までを横断して推進してきた。</p>
+        <div class="profile-statement">
+          <p class="profile-statement-text">クライアントと同じ方向を向く。<br>それがLOCABLEの原点です。</p>
+        </div>
       </div>
     </div>
   </div>
@@ -536,7 +595,7 @@ document.getElementById('contactForm').addEventListener('submit',async(e)=>{
     "addressRegion": "埼玉県",
     "addressCountry": "JP"
   },
-  "description": "商業施設・観光拠点・体験型施設のデジタルコンテンツ導入プロデューサー"
+  "description": "商業施設・観光拠点・地域拠点のロケーションビジネスプロデューサー"
 }
 </script>
 </body>
