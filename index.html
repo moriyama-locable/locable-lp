@@ -114,6 +114,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .why-step-title{font-size:0.92rem;font-weight:400;color:var(--tx-primary);margin-bottom:0.5rem}
 .why-step-desc{font-size:0.78rem;color:var(--tx-sub);line-height:1.85;font-weight:300}
 .why-arrow{font-size:1.4rem;color:var(--rule);text-align:center;align-self:center;font-family:var(--font-en)}
+.why-arrow::before{content:'→'}
 .why-result{margin-top:2.5rem;background:var(--navy);padding:2rem 2.5rem;display:grid;grid-template-columns:auto 1fr;gap:2rem;align-items:center}
 .why-result-label{font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--orange);white-space:nowrap;font-family:var(--font-en)}
 .why-result-text{font-size:1.08rem;font-weight:300;color:var(--tx-on-dark);line-height:1.8}
@@ -193,27 +194,208 @@ footer{background:#07101F;padding:2.75rem 4rem;border-top:1px solid rgba(255,255
 .footer-reg{font-size:0.65rem;color:var(--tx-on-dark-muted);letter-spacing:0.03em}
 .fu{opacity:0;transform:translateY(16px);transition:opacity 0.6s ease,transform 0.6s ease}
 .fu.on{opacity:1;transform:translateY(0)}
+
+/* ─── Hamburger ─── */
+.nav-hamburger{
+  display:none;
+  flex-direction:column;
+  justify-content:center;
+  gap:5px;
+  width:36px;height:36px;
+  cursor:pointer;background:none;border:none;padding:4px;
+}
+.nav-hamburger span{
+  display:block;height:1px;background:rgba(255,255,255,0.7);
+  transition:transform 0.3s,opacity 0.3s;
+  transform-origin:center;
+}
+.nav-hamburger.open span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.nav-hamburger.open span:nth-child(2){opacity:0}
+.nav-hamburger.open span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+
+/* Mobile drawer */
+.nav-drawer{
+  display:none;
+  position:fixed;
+  top:0;left:0;right:0;bottom:0;
+  background:rgba(21,32,66,0.98);
+  z-index:99;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:2.5rem;
+  opacity:0;
+  transition:opacity 0.3s;
+  pointer-events:none;
+}
+.nav-drawer.open{opacity:1;pointer-events:all}
+.nav-drawer-link{
+  font-family:var(--font-en);
+  font-size:1.1rem;
+  letter-spacing:0.2em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,0.7);
+  cursor:pointer;
+  background:none;border:none;
+  transition:color 0.2s;
+}
+.nav-drawer-link:hover{color:#fff}
+.nav-drawer-cta{
+  margin-top:1rem;
+  font-family:var(--font-en);
+  font-size:0.82rem;
+  letter-spacing:0.15em;
+  text-transform:uppercase;
+  color:#fff;
+  border:1px solid rgba(255,255,255,0.35);
+  padding:0.75rem 2rem;
+  background:transparent;
+  cursor:pointer;
+}
+
+/* ─── Tablet: 600–900px ─── */
 @media(max-width:900px){
-  nav{padding:1rem 1.5rem}.nav-links{display:none}
-  .hero{padding:7rem 1.5rem 4rem}
+  /* Nav */
+  nav{padding:1rem 1.5rem}
+  .nav-links{display:none}
+  .nav-cta{display:none}
+  .nav-hamburger{display:flex}
+  .nav-drawer{display:flex}
+
+  /* Hero */
+  .hero{padding:7rem 1.5rem 5rem}
+  .hero-bg-char{font-size:10rem;right:-1rem}
+  .hero-eyebrow{margin-bottom:1.5rem}
+  .hero-sub{margin-bottom:2.5rem}
   .hero-scroll{left:1.5rem}
+
+  /* Sections */
   .context,.what,.why,.howto,.sector,.profile,.cta{padding:4rem 1.5rem}
-  .issue-grid{grid-template-columns:1fr}
+
+  /* Context */
+  .issue-grid{grid-template-columns:1fr 1fr}
+
+  /* What we do */
   .service-core{grid-template-columns:1fr}
-  .what-grid{grid-template-columns:1fr}
-  .why-flow{grid-template-columns:1fr;gap:0.5rem}
-  .why-arrow{transform:rotate(90deg)}
-  .why-result{grid-template-columns:1fr}
+  .what-grid{grid-template-columns:1fr 1fr}
+
+  /* Why */
+  .why-flow{grid-template-columns:1fr;gap:0.75rem}
+  .why-arrow{display:flex;align-items:center;justify-content:center;font-size:1.1rem;padding:0}
+  .why-arrow::before{content:'↓'}
+  .why-result{grid-template-columns:1fr;gap:1rem}
+
+  /* How to start */
   .eng-row{grid-template-columns:3rem minmax(0,1fr)}
   .eng-row-left{grid-column:2;padding:1.5rem 1.5rem 0.5rem 0.75rem;border-right:none}
   .eng-row-right{grid-column:2;padding:0.5rem 1.5rem 1.75rem 0.75rem}
   .eng-row-num{padding:1.5rem 0 0 1.25rem;font-size:2rem;grid-row:1 / span 2}
-  .sector-row{grid-template-columns:2.5rem 1fr;gap:1rem}.sector-p,.sector-tag{display:none}
+
+  /* Sector */
+  .sector-row{grid-template-columns:2.5rem 1fr auto;gap:1rem}
+  .sector-p{display:none}
+
+  /* About */
   .profile-inner{grid-template-columns:1fr;gap:2.5rem}
+
+  /* Footer */
   footer{padding:1.75rem 1.5rem}
   .footer-inner{grid-template-columns:1fr;gap:1.75rem}
   .footer-right{align-items:flex-start}
   .footer-mid{flex-direction:column;gap:1.25rem}
+}
+
+/* ─── Mobile: ~600px ─── */
+@media(max-width:600px){
+  /* Nav */
+  nav{padding:0.9rem 1.25rem}
+  .nav-logo img{height:28px}
+
+  /* Hero */
+  .hero{padding:6.5rem 1.25rem 4rem;min-height:100svh}
+  .hero-bg-char{display:none}
+  .hero-eyebrow{font-size:0.6rem;margin-bottom:1.25rem}
+  .hero-sub{font-size:0.88rem;line-height:2;margin-bottom:2rem}
+  .hero-cta-group{flex-direction:column;align-items:stretch;gap:0.75rem}
+  .btn-fill,.btn-ghost{padding:0.9rem 1.5rem;text-align:center;font-size:0.84rem}
+  .hero-scroll{display:none}
+
+  /* Sections */
+  .context,.what,.why,.howto,.sector,.profile,.cta{padding:3.5rem 1.25rem}
+  .sec-title{font-size:1.4rem}
+  .sec-lead{font-size:0.86rem;margin-bottom:2rem}
+  .eyebrow{font-size:0.6rem}
+
+  /* Context */
+  .issue-grid{grid-template-columns:1fr;gap:1px}
+  .issue-card{padding:1.5rem 1.25rem}
+  .issue-num{font-size:1.2rem;margin-bottom:0.6rem}
+  .issue-text{font-size:0.84rem}
+
+  /* What we do */
+  .service-core{grid-template-columns:1fr}
+  .core-card{padding:1.75rem 1.25rem}
+  .core-title{font-size:1.05rem}
+  .core-text{font-size:0.82rem}
+  .core-list li{font-size:0.78rem}
+  .what-grid{grid-template-columns:1fr}
+  .what-item{padding:1.25rem}
+
+  /* Why */
+  .why-flow{grid-template-columns:1fr;gap:0.5rem}
+  .why-step{padding:1.5rem 1.25rem}
+  .why-step-num{font-size:1.15rem}
+  .why-step-title{font-size:0.88rem}
+  .why-step-desc{font-size:0.76rem}
+  .why-arrow{padding:0.25rem 0;font-size:1.1rem}
+  .why-arrow::before{content:'↓'}
+  .why-result{padding:1.5rem 1.25rem}
+  .why-result-text{font-size:0.92rem}
+
+  /* How to start */
+  .eng-row{grid-template-columns:2.5rem minmax(0,1fr)}
+  .eng-row-num{font-size:1.5rem;padding:1.25rem 0 0 1rem}
+  .eng-row-left{padding:1.25rem 1rem 0.5rem 0.75rem}
+  .eng-row-right{padding:0.25rem 1rem 1.5rem 0.75rem}
+  .eng-row-h{font-size:0.88rem}
+  .eng-row-p{font-size:0.8rem}
+  .eng-row-scope{font-size:0.72rem}
+
+  /* Sector */
+  .sector-row{grid-template-columns:2.5rem 1fr;gap:0.75rem}
+  .sector-p{display:none}
+  .sector-tag{display:none}
+  .sector-h{font-size:0.88rem}
+
+  /* About */
+  .profile{padding:3.5rem 1.25rem}
+  .profile-inner{grid-template-columns:1fr;gap:2rem}
+  .profile-name{font-size:1.2rem}
+  .profile-body{font-size:0.86rem;line-height:2}
+
+  /* Contact */
+  .cta{padding:4rem 1.25rem}
+  .cta-title{font-size:1.4rem;line-height:1.6}
+  .cta-body{font-size:0.84rem;margin-bottom:2rem}
+  .cta-eyebrow::before,.cta-eyebrow::after{width:1rem}
+  .cta-form-field{font-size:16px}/* iOS zoom防止 */
+  .cta-btn{padding:1rem 2rem;font-size:0.86rem;width:100%}
+
+  /* Footer */
+  footer{padding:1.5rem 1.25rem}
+  .footer-logo img{height:18px}
+  .footer-mid{gap:1rem}
+  .footer-copy,.footer-reg{font-size:0.62rem}
+}
+
+/* ─── Small mobile: ~375px ─── */
+@media(max-width:375px){
+  .hero{padding:6rem 1rem 3.5rem}
+  .context,.what,.why,.howto,.sector,.profile,.cta{padding:3rem 1rem}
+  .sec-title{font-size:1.25rem}
+  .issue-card{padding:1.25rem 1rem}
+  .profile{padding:3rem 1rem}
+  footer{padding:1.25rem 1rem}
 }
 </style>
 </head>
@@ -231,7 +413,18 @@ footer{background:#07101F;padding:2.75rem 4rem;border-top:1px solid rgba(255,255
     <button class="nav-link" onclick="document.querySelector('#sector').scrollIntoView({behavior:'smooth'})">Sector</button>
   </div>
   <button class="nav-cta" onclick="document.querySelector('#contact').scrollIntoView({behavior:'smooth'})">Contact</button>
+  <button class="nav-hamburger" id="hamburger" aria-label="メニュー">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+
+<!-- Mobile drawer -->
+<div class="nav-drawer" id="navDrawer">
+  <button class="nav-drawer-link" onclick="closeDrawer();setTimeout(()=>document.querySelector('#service').scrollIntoView({behavior:'smooth'}),300)">Service</button>
+  <button class="nav-drawer-link" onclick="closeDrawer();setTimeout(()=>document.querySelector('#start').scrollIntoView({behavior:'smooth'}),300)">Start</button>
+  <button class="nav-drawer-link" onclick="closeDrawer();setTimeout(()=>document.querySelector('#sector').scrollIntoView({behavior:'smooth'}),300)">Sector</button>
+  <button class="nav-drawer-cta" onclick="closeDrawer();setTimeout(()=>document.querySelector('#contact').scrollIntoView({behavior:'smooth'}),300)">Contact</button>
+</div>
 
 <!-- ① Firstview：キャッチ・サブコピー差し替え、説明文・hero-note削除 -->
 <section class="hero">
@@ -364,13 +557,13 @@ footer{background:#07101F;padding:2.75rem 4rem;border-top:1px solid rgba(255,255
         <div class="why-step-title">空間条件が分かる</div>
         <div class="why-step-desc">空間設計の専門知に裏付けられた視点で、コンテンツが成立する条件を読める。</div>
       </div>
-      <div class="why-arrow fu">→</div>
+      <div class="why-arrow fu"></div>
       <div class="why-step fu">
         <div class="why-step-num">02</div>
         <div class="why-step-title">デジタル実装が分かる</div>
         <div class="why-step-desc">映像・センサー・インタラクション・機材構成を、制作会社・ハードウェア・施工の各視点に接続して考えられる。</div>
       </div>
-      <div class="why-arrow fu">→</div>
+      <div class="why-arrow fu"></div>
       <div class="why-step fu">
         <div class="why-step-num">03</div>
         <div class="why-step-title">推進者として前に進める</div>
@@ -542,6 +735,22 @@ footer{background:#07101F;padding:2.75rem 4rem;border-top:1px solid rgba(255,255
 </footer>
 
 <script>
+// Hamburger menu
+const hamburger=document.getElementById('hamburger');
+const navDrawer=document.getElementById('navDrawer');
+function closeDrawer(){
+  hamburger.classList.remove('open');
+  navDrawer.classList.remove('open');
+  document.body.style.overflow='';
+}
+hamburger.addEventListener('click',()=>{
+  const isOpen=hamburger.classList.toggle('open');
+  navDrawer.classList.toggle('open',isOpen);
+  document.body.style.overflow=isOpen?'hidden':'';
+});
+// Close on backdrop click
+navDrawer.addEventListener('click',(e)=>{if(e.target===navDrawer)closeDrawer()});
+
 const obs=new IntersectionObserver(entries=>{
   entries.forEach(e=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('on'),60);obs.unobserve(e.target)}});
 },{threshold:0.08});
