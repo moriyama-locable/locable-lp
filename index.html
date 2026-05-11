@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>LOCABLE | Location Business Producer</title>
 <link rel="icon" type="image/svg+xml" href="assets/images/logo-navy.svg">
+<link rel="apple-touch-icon" href="assets/images/logo-navy.svg">
+<meta name="theme-color" content="#152042">
 <!-- SEO基本 -->
 <meta name="description" content="場所は、もっとできる。構想から収益まで——その場所で何が起きるかを、一緒に考え、形にする。LOCABLEは場所の可能性を読み、事業設計から実装まで一貫して支援します。">
 <meta name="robots" content="index, follow">
@@ -16,10 +18,17 @@
 <meta property="og:url" content="https://lp.locable.co.jp/">
 <meta property="og:site_name" content="LOCABLE">
 <meta property="og:locale" content="ja_JP">
+<meta property="og:image" content="https://lp.locable.co.jp/assets/images/ogp.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <!-- Twitter Card -->
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="LOCABLE | Location Business Producer">
 <meta name="twitter:description" content="場所は、もっとできる。構想から収益まで——その場所で何が起きるかを、一緒に考え、形にする。">
+<meta name="twitter:image" content="https://lp.locable.co.jp/assets/images/ogp.png">
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&family=Source+Sans+Pro:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -49,9 +58,9 @@ button,a{font-family:inherit}
 nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.1rem 4rem;background:rgba(21,32,66,0.96);backdrop-filter:blur(8px);border-bottom:1px solid rgba(255,255,255,0.08)}
 .nav-logo img{height:36px;width:auto;display:block}
 .nav-links{display:flex;align-items:center;gap:2.2rem}
-.nav-link{font-size:0.72rem;color:var(--tx-on-dark-sub);letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;transition:color 0.2s;background:none;border:none;font-weight:300;font-family:var(--font-en)}
+.nav-link{font-size:0.72rem;color:var(--tx-on-dark-sub);letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;transition:color 0.2s;background:none;border:none;font-weight:300;font-family:var(--font-en);text-decoration:none;display:inline-block}
 .nav-link:hover{color:var(--tx-on-dark)}
-.nav-cta{font-size:0.72rem;font-weight:400;letter-spacing:0.1em;color:var(--tx-on-dark);border:1px solid rgba(255,255,255,0.35);padding:0.45rem 1.1rem;cursor:pointer;transition:all 0.2s;text-transform:uppercase;background:transparent;font-family:var(--font-en)}
+.nav-cta{font-size:0.72rem;font-weight:400;letter-spacing:0.1em;color:var(--tx-on-dark);border:1px solid rgba(255,255,255,0.35);padding:0.45rem 1.1rem;cursor:pointer;transition:all 0.2s;text-transform:uppercase;background:transparent;font-family:var(--font-en);text-decoration:none;display:inline-block}
 .nav-cta:hover{background:var(--orange);border-color:var(--orange)}
 .hero{min-height:100vh;background:var(--navy);display:flex;flex-direction:column;justify-content:center;padding:9rem 4rem 6rem;position:relative;overflow:hidden}
 .hero::after{content:'';position:absolute;right:-12rem;top:20%;width:38rem;height:38rem;background:radial-gradient(circle,rgba(242,101,34,0.12),transparent 62%);pointer-events:none}
@@ -240,6 +249,7 @@ footer{background:#07101F;padding:2.75rem 4rem;border-top:1px solid rgba(255,255
   cursor:pointer;
   background:none;border:none;
   transition:color 0.2s;
+  text-decoration:none;display:block;
 }
 .nav-drawer-link:hover{color:#fff}
 .nav-drawer-cta{
@@ -253,6 +263,7 @@ footer{background:#07101F;padding:2.75rem 4rem;border-top:1px solid rgba(255,255
   padding:0.75rem 2rem;
   background:transparent;
   cursor:pointer;
+  text-decoration:none;display:block;
 }
 
 /* ─── Tablet: 600–900px ─── */
@@ -410,11 +421,11 @@ footer{background:#07101F;padding:2.75rem 4rem;border-top:1px solid rgba(255,255
     </a>
   </div>
   <div class="nav-links">
-    <button class="nav-link" onclick="document.querySelector('#service').scrollIntoView({behavior:'smooth'})">Service</button>
-    <button class="nav-link" onclick="document.querySelector('#start').scrollIntoView({behavior:'smooth'})">Start</button>
-    <button class="nav-link" onclick="document.querySelector('#sector').scrollIntoView({behavior:'smooth'})">Sector</button>
+    <a class="nav-link" href="#service">Service</a>
+    <a class="nav-link" href="#start">Start</a>
+    <a class="nav-link" href="#sector">Sector</a>
   </div>
-  <button class="nav-cta" onclick="document.querySelector('#contact').scrollIntoView({behavior:'smooth'})">Contact</button>
+  <a class="nav-cta" href="#contact">Contact</a>
   <button class="nav-hamburger" id="hamburger" aria-label="メニュー">
     <span></span><span></span><span></span>
   </button>
@@ -422,10 +433,10 @@ footer{background:#07101F;padding:2.75rem 4rem;border-top:1px solid rgba(255,255
 
 <!-- Mobile drawer -->
 <div class="nav-drawer" id="navDrawer">
-  <button class="nav-drawer-link" onclick="closeDrawer();setTimeout(()=>document.querySelector('#service').scrollIntoView({behavior:'smooth'}),300)">Service</button>
-  <button class="nav-drawer-link" onclick="closeDrawer();setTimeout(()=>document.querySelector('#start').scrollIntoView({behavior:'smooth'}),300)">Start</button>
-  <button class="nav-drawer-link" onclick="closeDrawer();setTimeout(()=>document.querySelector('#sector').scrollIntoView({behavior:'smooth'}),300)">Sector</button>
-  <button class="nav-drawer-cta" onclick="closeDrawer();setTimeout(()=>document.querySelector('#contact').scrollIntoView({behavior:'smooth'}),300)">Contact</button>
+  <a class="nav-drawer-link" href="#service" onclick="closeDrawer()">Service</a>
+  <a class="nav-drawer-link" href="#start" onclick="closeDrawer()">Start</a>
+  <a class="nav-drawer-link" href="#sector" onclick="closeDrawer()">Sector</a>
+  <a class="nav-drawer-cta" href="#contact" onclick="closeDrawer()">Contact</a>
 </div>
 
 <!-- ① Firstview：キャッチ・サブコピー差し替え、説明文・hero-note削除 -->
@@ -792,20 +803,80 @@ document.getElementById('contactForm').addEventListener('submit',async(e)=>{
 </script>
 
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "name": "LOCABLE（株式会社ロケブル）",
-  "url": "https://lp.locable.co.jp/",
-  "email": "info@locable.co.jp",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "さいたま市大宮区",
-    "addressRegion": "埼玉県",
-    "addressCountry": "JP"
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "LOCABLE（株式会社ロケブル）",
+    "alternateName": "ロケブル",
+    "url": "https://lp.locable.co.jp/",
+    "email": "info@locable.co.jp",
+    "logo": "https://lp.locable.co.jp/assets/images/logo-navy.svg",
+    "image": "https://lp.locable.co.jp/assets/images/ogp.png",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "桜木町1-398-1 アドグレイス大宮7F",
+      "addressLocality": "さいたま市大宮区",
+      "addressRegion": "埼玉県",
+      "addressCountry": "JP"
+    },
+    "description": "場所は、もっとできる。構想から収益まで——その場所で何が起きるかを、一緒に考え、形にする。LOCABLEは場所の可能性を読み、事業設計から実装まで一貫して支援します。",
+    "areaServed": "JP",
+    "serviceType": ["ロケーションビジネスプロデュース", "デジタルコンテンツ導入支援", "空間プロジェクトマネジメント", "体験設計", "企画構想"],
+    "founder": {
+      "@type": "Person",
+      "name": "森山哲也",
+      "jobTitle": "代表取締役",
+      "hasCredential": "一級建築士"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "サービス",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "現場導入・進行管理",
+            "description": "体験を実空間に導入する案件に入り、制作・空間設計を担当しながら各専門家をつなぎます。"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "継続伴走",
+            "description": "体験の狙い、来場者行動、収益・運営との接続、実装可能性を整理し、開業後の運用改善まで伴走します。"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "実装前の伴走（Spot Review）",
+            "description": "提案書、図面、機材構成、現地条件を確認し、実装上のリスクや不足論点を洗い出します。"
+          }
+        }
+      ]
+    }
   },
-  "description": "場所は、もっとできる。構想から収益まで——その場所で何が起きるかを、一緒に考え、形にする。"
-}
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "森山哲也",
+    "alternateName": "Tetsuya Moriyama",
+    "jobTitle": "代表取締役 / ロケーションビジネスプロデューサー",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "株式会社ロケブル"
+    },
+    "hasCredential": [
+      "一級建築士",
+      "ロケーションビジネスプロデューサー"
+    ],
+    "knowsAbout": ["空間設計", "デジタルコンテンツ実装", "プロジェクトマネジメント", "体験設計", "商業施設", "観光施設"]
+  }
+]
 </script>
 </body>
 </html>
