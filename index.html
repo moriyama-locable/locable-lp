@@ -221,7 +221,6 @@ footer{background:#07101F;padding:2.75rem 4rem;border-top:1px solid rgba(255,255
 .footer-reg{font-size:0.65rem;color:var(--tx-on-dark-muted);letter-spacing:0.03em}
 .fu{opacity:0;transform:translateY(16px);transition:opacity 0.6s ease,transform 0.6s ease}
 .fu.on{opacity:1;transform:translateY(0)}
-
 /* ─── Hamburger ─── */
 .nav-hamburger{
   display:none;
@@ -239,7 +238,6 @@ footer{background:#07101F;padding:2.75rem 4rem;border-top:1px solid rgba(255,255
 .nav-hamburger.open span:nth-child(1){transform:translateY(6px) rotate(45deg)}
 .nav-hamburger.open span:nth-child(2){opacity:0}
 .nav-hamburger.open span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
-
 /* Mobile drawer */
 .nav-drawer{
   display:none;
@@ -281,7 +279,6 @@ footer{background:#07101F;padding:2.75rem 4rem;border-top:1px solid rgba(255,255
   cursor:pointer;
   text-decoration:none;display:block;
 }
-
 /* ─── Tablet: 600–900px ─── */
 @media(max-width:900px){
   /* Nav */
@@ -290,56 +287,45 @@ footer{background:#07101F;padding:2.75rem 4rem;border-top:1px solid rgba(255,255
   .nav-cta{display:none}
   .nav-hamburger{display:flex}
   .nav-drawer{display:flex}
-
   /* Hero */
   .hero{padding:7rem 1.5rem 5rem}
   .hero-bg-char{font-size:10rem;right:-1rem}
   .hero-eyebrow{margin-bottom:1.5rem}
   .hero-sub{margin-bottom:2.5rem}
   .hero-scroll{left:1.5rem}
-
   /* Sections */
   .context,.what,.why,.howto,.sector,.profile,.cta{padding:4rem 1.5rem}
-
   /* Context */
   .issue-grid{grid-template-columns:1fr 1fr}
-
   /* What we do */
   .service-core{grid-template-columns:1fr}
   .what-grid{grid-template-columns:1fr 1fr}
-
   /* Why */
   .why-flow{grid-template-columns:1fr;gap:0.75rem}
   .why-arrow{display:flex;align-items:center;justify-content:center;font-size:1.1rem;padding:0}
   .why-arrow::before{content:'↓'}
   .why-result{grid-template-columns:1fr;gap:1rem}
-
   /* How to start */
   .eng-row{grid-template-columns:3rem minmax(0,1fr)}
   .eng-row-left{grid-column:2;padding:1.5rem 1.5rem 0.5rem 0.75rem;border-right:none}
   .eng-row-right{grid-column:2;padding:0.5rem 1.5rem 1.75rem 0.75rem}
   .eng-row-num{padding:1.5rem 0 0 1.25rem;font-size:2rem;grid-row:1 / span 2}
-
   /* Sector */
   .sector-row{grid-template-columns:2.5rem 1fr auto;gap:1rem}
   .sector-p{display:none}
-
   /* About */
   .profile-inner{grid-template-columns:1fr;gap:2.5rem}
-
   /* Footer */
   footer{padding:1.75rem 1.5rem}
   .footer-inner{grid-template-columns:1fr;gap:1.75rem}
   .footer-right{align-items:flex-start}
   .footer-mid{flex-direction:column;gap:1.25rem}
 }
-
 /* ─── Mobile: ~600px ─── */
 @media(max-width:600px){
   /* Nav */
   nav{padding:0.9rem 1.25rem}
   .nav-logo img{height:28px}
-
   /* Hero */
   .hero{padding:6.5rem 1.25rem 4rem;min-height:100svh}
   .hero-bg-char{display:none}
@@ -348,19 +334,16 @@ footer{background:#07101F;padding:2.75rem 4rem;border-top:1px solid rgba(255,255
   .hero-cta-group{flex-direction:column;align-items:stretch;gap:0.75rem}
   .btn-fill,.btn-ghost{padding:0.9rem 1.5rem;text-align:center;font-size:0.84rem}
   .hero-scroll{display:none}
-
   /* Sections */
   .context,.what,.why,.howto,.sector,.profile,.cta{padding:3.5rem 1.25rem}
   .sec-title{font-size:1.4rem}
   .sec-lead{font-size:0.86rem;margin-bottom:2rem}
   .eyebrow{font-size:0.6rem}
-
   /* Context */
   .issue-grid{grid-template-columns:1fr;gap:1px}
   .issue-card{padding:1.5rem 1.25rem}
   .issue-num{font-size:1.2rem;margin-bottom:0.6rem}
   .issue-text{font-size:0.84rem}
-
   /* What we do */
   .service-core{grid-template-columns:1fr}
   .core-card{padding:1.75rem 1.25rem}
@@ -369,7 +352,6 @@ footer{background:#07101F;padding:2.75rem 4rem;border-top:1px solid rgba(255,255
   .core-list li{font-size:0.78rem}
   .what-grid{grid-template-columns:1fr}
   .what-item{padding:1.25rem}
-
   /* Why */
   .why-flow{grid-template-columns:1fr;gap:0.5rem}
   .why-step{padding:1.5rem 1.25rem}
@@ -380,7 +362,6 @@ footer{background:#07101F;padding:2.75rem 4rem;border-top:1px solid rgba(255,255
   .why-arrow::before{content:'↓'}
   .why-result{padding:1.5rem 1.25rem}
   .why-result-text{font-size:0.92rem}
-
   /* How to start */
   .eng-row{grid-template-columns:2.5rem minmax(0,1fr)}
   .eng-row-num{font-size:1.5rem;padding:1.25rem 0 0 1rem}
@@ -389,19 +370,16 @@ footer{background:#07101F;padding:2.75rem 4rem;border-top:1px solid rgba(255,255
   .eng-row-h{font-size:0.88rem}
   .eng-row-p{font-size:0.8rem}
   .eng-row-scope{font-size:0.72rem}
-
   /* Sector */
   .sector-row{grid-template-columns:2.5rem 1fr;gap:0.75rem}
   .sector-p{display:none}
   .sector-tag{display:none}
   .sector-h{font-size:0.88rem}
-
   /* About */
   .profile{padding:3.5rem 1.25rem}
   .profile-inner{grid-template-columns:1fr;gap:2rem}
   .profile-name{font-size:1.2rem}
   .profile-body{font-size:0.86rem;line-height:2}
-
   /* Contact */
   .cta{padding:4rem 1.25rem}
   .cta-title{font-size:1.4rem;line-height:1.6}
@@ -409,14 +387,12 @@ footer{background:#07101F;padding:2.75rem 4rem;border-top:1px solid rgba(255,255
   .cta-eyebrow::before,.cta-eyebrow::after{width:1rem}
   .cta-form-field{font-size:16px}/* iOS zoom防止 */
   .cta-btn{padding:1rem 2rem;font-size:0.86rem;width:100%}
-
   /* Footer */
   footer{padding:1.5rem 1.25rem}
   .footer-logo img{height:18px}
   .footer-mid{gap:1rem}
   .footer-copy,.footer-reg{font-size:0.62rem}
 }
-
 /* ─── Small mobile: ~375px ─── */
 @media(max-width:375px){
   .hero{padding:6rem 1rem 3.5rem}
@@ -429,7 +405,6 @@ footer{background:#07101F;padding:2.75rem 4rem;border-top:1px solid rgba(255,255
 </style>
 </head>
 <body>
-
 <nav>
   <div class="nav-logo">
     <a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'})" style="display:block;line-height:0;cursor:pointer">
@@ -446,7 +421,6 @@ footer{background:#07101F;padding:2.75rem 4rem;border-top:1px solid rgba(255,255
     <span></span><span></span><span></span>
   </button>
 </nav>
-
 <!-- Mobile drawer -->
 <div class="nav-drawer" id="navDrawer">
   <a class="nav-drawer-link" href="#service" onclick="closeDrawer()">Service</a>
@@ -454,7 +428,6 @@ footer{background:#07101F;padding:2.75rem 4rem;border-top:1px solid rgba(255,255
   <a class="nav-drawer-link" href="#sector" onclick="closeDrawer()">Sector</a>
   <a class="nav-drawer-cta" href="#contact" onclick="closeDrawer()">Contact</a>
 </div>
-
 <!-- ① Firstview：キャッチ・サブコピー差し替え、説明文・hero-note削除 -->
 <section class="hero">
   <div class="hero-bg-char">L</div>
@@ -465,7 +438,7 @@ footer{background:#07101F;padding:2.75rem 4rem;border-top:1px solid rgba(255,255
     </h1>
     <p class="hero-sub">
       構想から運用まで——<br>
-      その場所で何が起きるかを、一緒に考え、形にする。
+      空間・体験・事業を横断して、その場所に何が必要かを一緒に考え、形にする。
     </p>
     <div class="hero-cta-group">
       <button class="btn-fill" onclick="document.querySelector('#contact').scrollIntoView({behavior:'smooth'})">プロジェクトを相談する</button>
@@ -474,7 +447,12 @@ footer{background:#07101F;padding:2.75rem 4rem;border-top:1px solid rgba(255,255
   </div>
   <div class="hero-scroll"><div class="scroll-bar"></div>scroll</div>
 </section>
-
+<!-- ②-a Identity：新規追加。空間プロデュースという一言の定義 -->
+<section class="context" style="padding:3.25rem 4rem;border-bottom:1px solid var(--rule)">
+  <div class="wrap">
+    <p class="fu" style="font-size:1.05rem;color:var(--tx-primary);font-weight:300;line-height:2;max-width:720px">LOCABLEは、空間の設計・体験の企画・事業としての成立性までを一貫して扱う、<em style="color:var(--orange);font-style:normal;font-weight:400">空間プロデュース</em>の会社です。</p>
+  </div>
+</section>
 <!-- ② Context：見出し・リード差し替え -->
 <section class="context">
   <div class="wrap">
@@ -509,22 +487,21 @@ footer{background:#07101F;padding:2.75rem 4rem;border-top:1px solid rgba(255,255
     </div>
   </div>
 </section>
-
 <!-- ③ What we do：リード差し替え -->
 <section class="what" id="service">
   <div class="what-accent"></div>
   <div class="wrap">
     <div class="eyebrow">What we do</div>
-    <h2 class="sec-title">主力は、<em>構想の実現とプロジェクトマネジメント</em>。<br>必要に応じて、企画構想までさかのぼります。</h2>
+    <h2 class="sec-title">主力は、<em>空間・体験プロデュース</em>。<br>必要に応じて、企画構想までさかのぼります。</h2>
     <p class="sec-lead">企画する側と専門家の間に入り、言葉と判断基準をそろえながら、現場で動く状態まで整えます。</p>
-
     <div class="service-core">
       <div class="core-card main fu">
         <div class="core-label">Core Service</div>
-        <div class="core-kicker">Implementation / PM</div>
-        <h3 class="core-title">デジタルコンテンツ導入・進行管理</h3>
-        <p class="core-text">体験コンテンツを空間に実装するために、機材条件、施工条件、運営条件、関係者の役割分担を整理し、開業・本番までの推進を担います。</p>
+        <div class="core-kicker">Space & Experience Produce</div>
+        <h3 class="core-title">空間・体験プロデュース</h3>
+        <p class="core-text">建築設計・図面パース制作・デジタルコンテンツ導入を横断し、機材条件、施工条件、運営条件、関係者の役割分担を整理して、開業・本番までの推進を担います。</p>
         <ul class="core-list">
+          <li>建築設計・図面パース制作</li>
           <li>機材・什器・配線・設置条件の整理</li>
           <li>コンテンツ制作会社、施工会社、施設側の調整</li>
           <li>スケジュール、課題、意思決定事項の管理</li>
@@ -544,7 +521,6 @@ footer{background:#07101F;padding:2.75rem 4rem;border-top:1px solid rgba(255,255
         </ul>
       </div>
     </div>
-
     <div class="what-grid">
       <div class="what-item fu">
         <div class="what-item-title">実装条件の整理</div>
@@ -573,7 +549,6 @@ footer{background:#07101F;padding:2.75rem 4rem;border-top:1px solid rgba(255,255
     </div>
   </div>
 </section>
-
 <!-- ④ Why：見出し・本文差し替え -->
 <section class="why">
   <div class="wrap">
@@ -583,14 +558,14 @@ footer{background:#07101F;padding:2.75rem 4rem;border-top:1px solid rgba(255,255
     <div class="why-flow">
       <div class="why-step fu">
         <div class="why-step-num">01</div>
-        <div class="why-step-title">空間条件が分かる</div>
-        <div class="why-step-desc">空間設計の専門知に裏付けられた視点で、コンテンツが成立する条件を読める。</div>
+        <div class="why-step-title">事業条件が分かる</div>
+        <div class="why-step-desc">立地・客層・収益構造を含めて、その場所が事業として成立するかどうかを読める。</div>
       </div>
       <div class="why-arrow fu"></div>
       <div class="why-step fu">
         <div class="why-step-num">02</div>
-        <div class="why-step-title">デジタル実装が分かる</div>
-        <div class="why-step-desc">映像・センサー・インタラクション・機材構成を、制作会社・ハードウェア・施工の各視点に接続して考えられる。</div>
+        <div class="why-step-title">空間実装が分かる</div>
+        <div class="why-step-desc">建築設計・図面パースから、映像・センサー・インタラクションのデジタルコンテンツ導入まで、制作会社・ハードウェア・施工の各視点に接続して考えられる。</div>
       </div>
       <div class="why-arrow fu"></div>
       <div class="why-step fu">
@@ -605,7 +580,6 @@ footer{background:#07101F;padding:2.75rem 4rem;border-top:1px solid rgba(255,255
     </div>
   </div>
 </section>
-
 <!-- How to start：変更なし -->
 <section class="howto" id="start">
   <div class="wrap">
@@ -613,33 +587,10 @@ footer{background:#07101F;padding:2.75rem 4rem;border-top:1px solid rgba(255,255
     <h2 class="sec-title"><em>LOCABLEの関わり方</em></h2>
     <p class="sec-lead">まずは現場の整理と進行管理から。必要に応じて、企画や事業設計まで広げていく形が基本です。</p>
     <div class="eng-list">
-      <div class="eng-row feat fu">
+      <div class="eng-row fu">
         <div class="eng-row-num">01</div>
         <div class="eng-row-left">
-          <div class="eng-badge">Core</div>
-          <div class="eng-row-h">現場導入・進行管理</div>
-          <div class="eng-row-price">Project PM</div>
-        </div>
-        <div class="eng-row-right">
-          <p class="eng-row-p">体験を実空間に導入する案件に入り、制作・空間設計を担当しながら各専門家をつなぎます。開業・イベント本番・設置完了まで、課題整理と進行管理を担います。</p>
-          <div class="eng-row-scope"><span class="eng-scope-label">向いている状況</span>導入する構想はできているが、実現のための推進に不安がある</div>
-        </div>
-      </div>
-      <div class="eng-row upstream fu">
-        <div class="eng-row-num">02</div>
-        <div class="eng-row-left">
-          <div class="eng-row-h">継続伴走</div>
-          <div class="eng-row-price">Upstream</div>
-        </div>
-        <div class="eng-row-right">
-          <p class="eng-row-p">まだ何を作るかが固まっていない段階から、体験の狙い、来場者行動、収益・運営との接続、実装可能性を整理します。実装を前提にした上流整理です。開業後の運用改善まで伴走します。</p>
-          <div class="eng-row-scope"><span class="eng-scope-label">向いている状況</span>場所やテーマはあるが、体験・事業・実装条件がまだつながっていない</div>
-        </div>
-      </div>
-      <div class="eng-row fu">
-        <div class="eng-row-num">03</div>
-        <div class="eng-row-left">
-          <div class="eng-row-h">実装前の伴走</div>
+          <div class="eng-row-h">施設計画レビュー</div>
           <div class="eng-row-price">Spot Review</div>
         </div>
         <div class="eng-row-right">
@@ -647,16 +598,38 @@ footer{background:#07101F;padding:2.75rem 4rem;border-top:1px solid rgba(255,255
           <div class="eng-row-scope"><span class="eng-scope-label">向いている状況</span>大きな契約や工事に入る前に、破綻しやすい論点を確認したい</div>
         </div>
       </div>
+      <div class="eng-row feat fu">
+        <div class="eng-row-num">02</div>
+        <div class="eng-row-left">
+          <div class="eng-badge">Core</div>
+          <div class="eng-row-h">空間・体験プロデュース</div>
+          <div class="eng-row-price">Project PM</div>
+        </div>
+        <div class="eng-row-right">
+          <p class="eng-row-p">建築設計・図面パース制作から、体験を実空間に導入する案件まで、制作・空間設計を担当しながら各専門家をつなぎます。開業・イベント本番・設置完了まで、課題整理と進行管理を担います。</p>
+          <div class="eng-row-scope"><span class="eng-scope-label">向いている状況</span>導入する構想はできているが、実現のための推進に不安がある</div>
+        </div>
+      </div>
+      <div class="eng-row upstream fu">
+        <div class="eng-row-num">03</div>
+        <div class="eng-row-left">
+          <div class="eng-row-h">場所の事業化スタディ</div>
+          <div class="eng-row-price">Upstream</div>
+        </div>
+        <div class="eng-row-right">
+          <p class="eng-row-p">まだ何を作るかが固まっていない段階から、体験の狙い、来場者行動、収益・運営との接続、実装可能性を整理します。実装を前提にした上流整理です。開業後の運用改善まで伴走します。</p>
+          <div class="eng-row-scope"><span class="eng-scope-label">向いている状況</span>場所やテーマはあるが、体験・事業・実装条件がまだつながっていない</div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
-
 <!-- Sector：変更なし -->
 <section class="sector" id="sector">
   <div class="wrap">
     <div class="eyebrow">Sector</div>
     <h2 class="sec-title">得意とする<em>領域</em></h2>
-    <p class="sec-lead">場所の事業価値を高め、来場者の体験と行動を変える領域を中心に対応します。</p>
+    <p class="sec-lead">商業施設・小売、観光・宿泊・地域拠点、体験型施設を中心に、既存の場所・施設・店舗を持つ企業に対応します。</p>
     <div class="sector-list">
       <div class="sector-row fu">
         <div class="sector-n">01</div>
@@ -679,7 +652,6 @@ footer{background:#07101F;padding:2.75rem 4rem;border-top:1px solid rgba(255,255
     </div>
   </div>
 </section>
-
 <!-- ⑤ About：本文を動機文に全面差し替え -->
 <section class="profile">
   <div class="profile-accent"></div>
@@ -700,15 +672,15 @@ footer{background:#07101F;padding:2.75rem 4rem;border-top:1px solid rgba(255,255
             <div class="profile-meta-val">建築設計 / 空間開発<br>事業立ち上げ / 部門マネジメント</div>
           </div>
           <div class="profile-meta-item">
-            <span class="profile-meta-label">Projects</span>
-            <div class="profile-meta-val">50拠点以上の空間プロジェクトに関与</div>
+            <span class="profile-meta-label">Award</span>
+            <div class="profile-meta-val">第31回福島県建築文化賞 優秀賞<br>（尾瀬書美術館 思郷館／空創計画TNアトリエとのJV）</div>
           </div>
         </div>
       </div>
       <div class="profile-right fu">
         <div class="profile-body">
           <p>私がLOCABLEを作ったのは、ある役割が空白になっていると気づいたからです。</p>
-          <p>設計、制作、施工——それぞれのプロフェッショナルは自分の領域で力を尽くす。でも、クライアントの構想を全体としてつなぎ、実現まで責任を持つ人間がいない。気づけば構想は変わり、当初の目的から遠ざかっていく。</p>
+          <p>設計、制作、施工——それぞれのプロフェッショナルは自分の領域で力を尽くす一方で、クライアントの構想を全体としてつなぎ、実現まで責任を持つ人間がいない、という空白でした。気づけば構想は変わり、当初の目的から遠ざかっていく。</p>
         </div>
         <div class="profile-statement">
           <p class="profile-statement-text">クライアントと同じ方向を向く。<br>それがLOCABLEの原点です。</p>
@@ -717,7 +689,6 @@ footer{background:#07101F;padding:2.75rem 4rem;border-top:1px solid rgba(255,255
     </div>
   </div>
 </section>
-
 <!-- ⑥ Contact：リード差し替え -->
 <section class="cta" id="contact">
   <div class="cta-glow"></div>
@@ -725,7 +696,6 @@ footer{background:#07101F;padding:2.75rem 4rem;border-top:1px solid rgba(255,255
     <div class="cta-eyebrow">Contact</div>
     <h2 class="cta-title">実装で止まりそうな案件を、<br><em>前に進める</em>相談から。</h2>
     <p class="cta-body">構想はある。でも現場で成立するか不安。<br>そういった段階からご相談ください。</p>
-
     <form id="contactForm" style="width:100%;max-width:480px;margin:0 auto;display:flex;flex-direction:column;gap:0.85rem;text-align:left">
       <input type="text" name="name" placeholder="お名前 *" required class="cta-form-field">
       <input type="text" name="company" placeholder="会社名・組織名" class="cta-form-field">
@@ -737,7 +707,6 @@ footer{background:#07101F;padding:2.75rem 4rem;border-top:1px solid rgba(255,255
     </form>
   </div>
 </section>
-
 <footer>
   <hr class="footer-rule">
   <div class="footer-inner">
@@ -764,7 +733,6 @@ footer{background:#07101F;padding:2.75rem 4rem;border-top:1px solid rgba(255,255
     </div>
   </div>
 </footer>
-
 <script>
 // Hamburger menu
 const hamburger=document.getElementById('hamburger');
@@ -781,12 +749,10 @@ hamburger.addEventListener('click',()=>{
 });
 // Close on backdrop click
 navDrawer.addEventListener('click',(e)=>{if(e.target===navDrawer)closeDrawer()});
-
 const obs=new IntersectionObserver(entries=>{
   entries.forEach(e=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('on'),60);obs.unobserve(e.target)}});
 },{threshold:0.08});
 document.querySelectorAll('.fu').forEach(el=>obs.observe(el));
-
 document.getElementById('contactForm').addEventListener('submit',async(e)=>{
   e.preventDefault();
   const btn=document.getElementById('submitBtn');
@@ -817,7 +783,6 @@ document.getElementById('contactForm').addEventListener('submit',async(e)=>{
   }
 });
 </script>
-
 <script type="application/ld+json">
 [
   {
@@ -838,7 +803,7 @@ document.getElementById('contactForm').addEventListener('submit',async(e)=>{
     },
     "description": "場所は、もっとできる。構想から収益まで——その場所で何が起きるかを、一緒に考え、形にする。LOCABLEは場所の可能性を読み、事業設計から実装まで一貫して支援します。",
     "areaServed": "JP",
-    "serviceType": ["ロケーションビジネスプロデュース", "デジタルコンテンツ導入支援", "空間プロジェクトマネジメント", "体験設計", "企画構想"],
+    "serviceType": ["ロケーションビジネスプロデュース", "空間・体験プロデュース", "施設計画レビュー", "場所の事業化スタディ", "建築設計", "デジタルコンテンツ導入支援"],
     "founder": {
       "@type": "Person",
       "name": "森山哲也",
@@ -853,24 +818,24 @@ document.getElementById('contactForm').addEventListener('submit',async(e)=>{
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "現場導入・進行管理",
-            "description": "体験を実空間に導入する案件に入り、制作・空間設計を担当しながら各専門家をつなぎます。"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "継続伴走",
-            "description": "体験の狙い、来場者行動、収益・運営との接続、実装可能性を整理し、開業後の運用改善まで伴走します。"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "実装前の伴走（Spot Review）",
+            "name": "施設計画レビュー（Spot Review）",
             "description": "提案書、図面、機材構成、現地条件を確認し、実装上のリスクや不足論点を洗い出します。"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "空間・体験プロデュース",
+            "description": "建築設計・図面パース制作・デジタルコンテンツ導入を横断し、体験を実空間に導入する案件で、制作・空間設計を担当しながら各専門家をつなぎます。"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "場所の事業化スタディ（Upstream）",
+            "description": "体験の狙い、来場者行動、収益・運営との接続、実装可能性を整理し、開業後の運用改善まで伴走します。"
           }
         }
       ]
